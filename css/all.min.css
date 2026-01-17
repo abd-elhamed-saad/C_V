@@ -1,0 +1,144 @@
+/* Minimal CSS for Font Awesome Icons */
+.fa, .fas, .far, .fal, .fad, .fab {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+}
+
+.fa, .fas {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+}
+
+.fab {
+  font-family: 'Font Awesome 6 Brands';
+  font-weight: 400;
+}
+
+.fa-chef-hat::before {
+  content: "\f5d7";
+}
+
+.fa-user::before {
+  content: "\f007";
+}
+
+.fa-download::before {
+  content: "\f019";
+}
+
+.fa-chevron-up::before {
+  content: "\f077";
+}
+
+.fa-plus::before {
+  content: "\f067";
+}
+
+.fa-clock::before {
+  content: "\f017";
+}
+
+.fa-check::before {
+  content: "\f00c";
+}
+
+.fa-calendar-days::before {
+  content: "\f073";
+}
+
+.fa-user-group::before {
+  content: "\f500";
+}
+
+.fa-medal::before {
+  content: "\f5a2";
+}
+
+.fa-location-dot::before {
+  content: "\f3c5";
+}
+
+.fa-phone::before {
+  content: "\f095";
+}
+
+.fa-envelope::before {
+  content: "\f0e0";
+}
+
+.fa-globe::before {
+  content: "\f0ac";
+}
+
+.fa-map-marker-alt::before {
+  content: "\f3c5";
+}
+
+.fa-desktop::before {
+  content: "\f108";
+}
+
+.fa-code::before {
+  content: "\f106";
+}
+
+.fa-camera::before {
+  content: "\f030";
+}
+
+.fa-mobile::before {
+  content: "\f3cd";
+}
+
+.fa-paintbrush::before {
+  content: "\f1fc";
+}
+
+.fa-chart-simple::before {
+  content: "\e471";
+}
+
+.fa-linkedin-in::before {
+  content: "\f0e1";
+}
+
+.fa-github::before {
+  content: "\f09b";
+}
+
+.fa-twitter::before {
+  content: "\f099";
+}
+
+.fa-facebook-f::before {
+  content: "\f39e";
+}
+
+.fa-facebook::before {
+  content: "\f09a";
+}
+
+.fa-bars::before {
+  content: "\f0c9";
+}
+
+.fa-linkedin::before {
+  content: "\f08c";
+}
+
+.fa-instagram::before {
+  content: "\f16d";
+}
+
+.fa-pinterest::before {
+  content: "\f0d2";
+}
+
+/* Basic icon styles */
+i {
+  display: inline-block;
+  font-style: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

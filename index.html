@@ -56,6 +56,7 @@
     </div>
 </nav>
 <!-- End Navbar Section -->
+
 <!-- Start Header Section -->
 <header id="home" class="home vh-100 text-center">
     <div class="content d-flex align-items-center justify-content-center">
@@ -78,6 +79,7 @@
     </div>
 </header>
 <!-- End Header Section -->
+
 <!-- Start About Section -->
 <section id="about" class="about py-5">
     <div class="container">
@@ -154,76 +156,270 @@
 
 <!-- Start Skills Section -->
 <section id="skills" class="services py-5 bg-light">
-    <div class="container text-center">
-        <div class="services-heading mb-5">
+    <div class="container">
+        <div class="services-heading mb-5 text-center">
             <h3>TECHNICAL SKILLS</h3>
             <p>My expertise in various technologies and tools</p>
-            <div class="line"></div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="skill mb-4">
-                    <p class="d-flex align-items-center justify-content-between">Python & Odoo
-                        <span>100%</span>
-                    </p>
-                    <div class="progress html">
-                    </div>
-                </div>
-                <div class="skill mb-4">
-                    <p class="d-flex align-items-center justify-content-between">PostgreSQL
-                        <span>90%</span>
-                    </p>
-                    <div class="progress css">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="skill mb-4">
-                    <p class="d-flex align-items-center justify-content-between">HTML / CSS / JS
-                        <span>80%</span>
-                    </p>
-                    <div class="progress php">
-                    </div>
-                </div>
-                <div class="skill mb-4">
-                    <p class="d-flex align-items-center justify-content-between">REST API & XML
-                        <span>70%</span>
-                    </p>
-                    <div class="progress js">
-                    </div>
-                </div>
-            </div>
+            <div class="line mx-auto"></div>
         </div>
 
-        <div class="row mt-5">
-            <div class="col-md-6">
-                <h4>Certifications</h4>
-                <ul class="text-start">
-                    <li>Odoo Functional Certification</li>
-                    <li>Python Programming Certificate</li>
-                    <li>Database Management Specialist</li>
-                    <li>Web Development Fundamentals</li>
-                </ul>
+        <!-- Two column layout: images on left, skills on right -->
+        <div class="row align-items-center">
+            <!-- Left Column: Images (side by side vertically) -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="image-container">
+                    <img src="./images/odoo-kochi.png" alt="Technical Skills Details"
+                         class="img-fluid rounded shadow" onerror="this.onerror=null; this.src='images/abdo.png';">
+                </div>
             </div>
-            <div class="col-md-6">
-                <h4>Languages</h4>
-                <ul class="text-start">
-                    <li>Arabic (Native)</li>
-                    <li>English (Intermediate)</li>
-                </ul>
+
+            <!-- Right Column: Skills -->
+            <div class="col-lg-6">
+                <div class="skills-container">
+                    <div class="skill mb-4">
+                        <p class="d-flex align-items-center justify-content-between">
+                            <span class="skill-with-icon"><i class="fab fa-python skill-icon-python"></i> Python & Odoo</span>
+                            <span class="skill-percentage">100%</span>
+                        </p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-python" style="width: 100%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill mb-4">
+                        <p class="d-flex align-items-center justify-content-between">
+                            <span class="skill-with-icon"><i class="fas fa-database skill-icon-database"></i> PostgreSQL</span>
+                            <span class="skill-percentage">90%</span>
+                        </p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-postgres" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill mb-4">
+                        <p class="d-flex align-items-center justify-content-between">
+                            <span class="skill-with-icon"><i class="fab fa-html5 skill-icon-html"></i> HTML</span>
+                            <span class="skill-percentage">100%</span>
+                        </p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-html" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <p class="d-flex align-items-center justify-content-between">
+                            <span class="skill-with-icon"><i class="fab fa-css3-alt skill-icon-css"></i> CSS</span>
+                            <span class="skill-percentage">100%</span>
+                        </p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-css" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <p class="d-flex align-items-center justify-content-between">
+                            <span class="skill-with-icon"><i
+                                    class="fab fa-js skill-icon-js"></i> Js (Java Script)</span>
+                            <span class="skill-percentage">80%</span>
+                        </p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-js" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill mb-4">
+                        <p class="d-flex align-items-center justify-content-between">
+                            <span class="skill-with-icon"><i class="fas fa-exchange-alt skill-icon-api"></i> REST API & XML</span>
+                            <span class="skill-percentage">70%</span>
+                        </p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-api" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <h4 class="mb-4">Certifications</h4>
+                        <ul class="text-start">
+                            <li>Odoo Functional Certification</li>
+                            <li>Python Programming Certificate</li>
+                            <li>Database Management Specialist</li>
+                            <li>Web Development Fundamentals</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="mb-4">Languages</h4>
+                        <ul class="text-start">
+                            <li>Arabic (Native)</li>
+                            <li>English (Intermediate)</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 <!-- End Skills Section -->
 
+<!-- Start Experience Section -->
+<section id="experience" class="about py-5">
+    <div class="container">
+        <div class="row g-md-5">
+            <div class="services-heading mb-5 text-center">
+                <h3>WORK EXPERIENCE</h3>
+                <p>Professional journey and career progression</p>
+                <div class="line mx-auto"></div>
+            </div>
+
+            <!-- Services and Key Achievements in one row -->
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <h5 class="about-title position-relative mb-5">Key Achievements</h5>
+                    <ul class="mb-4">
+                        <li>Successfully delivered 15+ Odoo implementations</li>
+                        <li>Improved system efficiency by 40% for major clients</li>
+                        <li>Reduced manual processes by automating workflows</li>
+                        <li>Trained 50+ end users on new systems</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="about-title position-relative mb-5">Services</h5>
+                    <ul class="mb-4">
+                        <li>Odoo Development</li>
+                        <li>ERP Implementation</li>
+                        <li>Custom Module Creation</li>
+                        <li>System Integration</li>
+                        <li>Migration & Upgrades</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-md-12">
+                <!-- Work Experiences arranged chronologically (oldest to newest) -->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-6 mb-4">-->
+<!--                        <div class="job p-3 h-100 company-job random-color-1"-->
+<!--                             style="background: #f8f9fa; border-radius: 0 4px 4px 0;">-->
+<!--                            <h4><img src="" alt="MSH Logo" class="company-logo"-->
+<!--                                     onerror="this.onerror=null; this.src='./images/company/building-company.png';">-->
+<!--                                Accountant – MSH for Tax Consultation</h4>-->
+<!--                            <p>2017 – 2019</p>-->
+<!--                            <p>Managed tax accounting, company establishment, and electronic invoice registration.-->
+<!--                                Prepared monthly and annual tax returns, ensuring compliance with local regulations.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-6 mb-4">-->
+<!--                        <div class="job p-3 h-100 company-job random-color-2"-->
+<!--                             style="background: #f8f9fa; border-radius: 0 4px 4px 0;">-->
+<!--                            <h4><img src="images/company/Bradfast.jpg" alt="Breadfast Logo" class="company-logo"-->
+<!--                                     onerror="this.onerror=null; this.src='./images/company/building-company.png';">-->
+<!--                                Team Leader – Breadfast</h4>-->
+<!--                            <p>2019 – 2021</p>-->
+<!--                            <p>Managed and assigned tasks to delivery personnel using the Odoo system.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="job p-3 h-100 company-job random-color-3"
+                             style="background: #f8f9fa; border-radius: 0 4px 4px 0;">
+                            <h4><img src="" alt="Freelance Logo" class="company-logo"
+                                     onerror="this.onerror=null; this.src='./images/company/building-company.png';">
+                                Freelance Odoo Developer</h4>
+                            <p>2021</p>
+                            <p>Developed custom Odoo modules for CRM, Invoicing, and Sales</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="job p-3 h-100 company-job random-color-4"
+                             style="background: #f8f9fa; border-radius: 0 4px 4px 0;">
+                            <h4><img src="images/company/capstone_selution.jpg" alt="Capstone Logo" class="company-logo"
+                                     onerror="this.onerror=null; this.src='./images/company/building-company.png';">
+                                Odoo Developer – Capstone</h4>
+                            <p>10/2021 – 11/2022</p>
+                            <p>Customized and developed Odoo modules for CRM, HR, Invoice, Sales, and Purchase. Enhanced
+                                system functionalities to streamline business processes. Worked on printing
+                                customization.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="job p-3 h-100 company-job random-color-5"
+                             style="background: #f8f9fa; border-radius: 0 4px 4px 0;">
+                            <h4><img src="images/company/digitec.jpg" alt="Digitec Logo" class="company-logo"
+                                     onerror="this.onerror=null; this.src='./images/company/building-company.png';">
+                                Odoo Developer – Digitec</h4>
+                            <p>12/2022 – 9/2024</p>
+                            <p>Customized Odoo modules including leave_type, sick_leave, payroll, attendance, work_time,
+                                purchase_request, and stock_request. Added new custom models, policies, and security
+                                rules for user-specific access. Improved system workflows for evening shift management,
+                                including policies for delays, overtime, and absences.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="job p-3 h-100 company-job random-color-5"
+                             style="background: #f8f9fa; border-radius: 0 4px 4px 0;">
+                            <h4><img src="images/company/knowledgebi_logo.jpg" alt="Knowledgebi Logo"
+                                     class="company-logo"
+                                     onerror="this.onerror=null; this.src='images/company/default-company.png';"> Odoo
+                                Developer – Knowledgebi</h4>
+                            <p>10/2024 – 9/2025</p>
+                            <p>Developing and maintaining HR, Leave, Loan, Attendance, Projects, and Portal modules.
+                                Implementing custom solutions for client requirements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4 offset-md-3">
+                        <div class="job p-3 h-100 company-job random-color-7"
+                             style="background: #f8f9fa; border-radius: 0 4px 4px 0;">
+                            <h4><img src="images/company/sb5_superior_business_solutions_sbs_logo.jpg" alt="SBS Logo"
+                                     class="company-logo"
+                                     onerror="this.onerror=null; this.src='./images/company/building-company.png';">
+                                SBS - Superior Business Solutions </h4>
+                            <p>2025 – Present</p>
+                            <p>Implemented custom solutions for SBS projects, focusing on ERP customization and business
+                                process optimization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Company Template: Copy this entire div block to add a new company -->
+        <!-- Template for adding new companies - Copy and paste this block when adding new companies -->
+        <div style="display: none;">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="job p-3 h-100 company-job random-color-X"
+                         style="background: #f8f9fa; border-radius: 0 4px 4px 0;">
+                        <h4><img src="images/company/companyname-logo.png" alt="Company Name Logo"
+                                 class="company-logo"
+                                 onerror="this.onerror=null; this.src='./images/company/building-company.png';"> Job
+                            Title – Company Name</h4>
+                        <p>Start Year – End Year</p>
+                        <p>Description of your role and responsibilities at this company.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- End Experience Section -->
+
+
 <!-- Start Work Section (Projects) -->
 <section id="work" class="work py-5">
-    <div class="container text-center">
-        <div class="work-heading mb-5">
+    <div class="container">
+        <div class="services-heading mb-5 text-center">
             <h3>PROJECTS & EXPERTISE</h3>
             <p>Real-world implementations and specialized solutions</p>
-            <div class="line"></div>
+            <div class="line mx-auto"></div>
         </div>
         <div class="projects-grid">
             <div class="project-card">
@@ -282,128 +478,40 @@
             </div>
         </div>
     </div>
-    <div class="work-bg">
-        <div class="content"></div>
-    </div>
+
 </section>
 <!-- End Work Section -->
 
-<!-- Start Experience Section -->
-<section id="experience" class="about py-5">
+<!-- Footer Section -->
+<footer class="footer bg-dark text-white py-4">
     <div class="container">
-        <div class="row g-md-5">
-            <div class="col-md-6">
-                <h5 class="about-title position-relative mb-5">Work Experience</h5>
-
-                <div class="job mb-4 p-3"
-                     style="border-left: 3px solid #0078ff; background: #f8f9fa; border-radius: 0 4px 4px 0;">
-                    <h4>Odoo Developer – Knowledgebi</h4>
-                    <p>2024 – Present</p>
-                    <p>Developing and maintaining HR, Leave, Loan, Attendance, Projects, and Portal modules.
-                        Implementing custom solutions for client requirements.</p>
-                </div>
-
-                <div class="job mb-4 p-3"
-                     style="border-left: 3px solid #0078ff; background: #f8f9fa; border-radius: 0 4px 4px 0;">
-                    <h4>Odoo Developer – Digitec</h4>
-                    <p>2022 – 2024</p>
-                    <p>Specialized in Payroll, Attendance, Purchase Requests, and Policy implementations. Optimized
-                        system performance and user experience.</p>
-                </div>
-
-                <div class="job mb-4 p-3"
-                     style="border-left: 3px solid #0078ff; background: #f8f9fa; border-radius: 0 4px 4px 0;">
-                    <h4>Odoo Developer – Capstone</h4>
-                    <p>2021 – 2022</p>
-                    <p>Developed CRM, Sales, Invoicing, and Printing modules. Created custom reports and automated
-                        business processes.</p>
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                <h5 class="mb-0">Abd Elhamed Saad</h5>
+                <p class="mb-0 text-muted">Odoo Developer</p>
+            </div>
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+                <div class="social-links d-flex justify-content-center">
+                    <a href="https://www.linkedin.com/in/abd-el-hamed-saad/" target="_blank" class="text-white mx-2">
+                        <i class="fab fa-linkedin-in fs-5"></i>
+                    </a>
+                    <a href="https://github.com/abd-elhamed-saad" target="_blank" class="text-white mx-2">
+                        <i class="fab fa-github fs-5"></i>
+                    </a>
+                    <a href="https://www.facebook.com/Abd.Elh7med.Saad" target="_blank" class="text-white mx-2">
+                        <i class="fab fa-facebook-f fs-5"></i>
+                    </a>
+                    <a href="https://wa.me/01050039300" target="_blank" class="text-white mx-2">
+                        <i class="fab fa-whatsapp fs-5"></i>
+                    </a>
                 </div>
             </div>
-
-            <div class="col-md-6">
-                <h5 class="about-title position-relative mb-5">Key Achievements</h5>
-                <ul class="mb-4">
-                    <li>Successfully delivered 15+ Odoo implementations</li>
-                    <li>Improved system efficiency by 40% for major clients</li>
-                    <li>Reduced manual processes by automating workflows</li>
-                    <li>Trained 50+ end users on new systems</li>
-                </ul>
-
-                <h5 class="about-title position-relative mb-5">Services</h5>
-                <ul class="mb-4">
-                    <li>Odoo Development</li>
-                    <li>ERP Implementation</li>
-                    <li>Custom Module Creation</li>
-                    <li>System Integration</li>
-                    <li>Migration & Upgrades</li>
-                </ul>
+            <div class="col-md-4 text-center text-md-end">
+                <p class="mb-0">&copy; 2026 Abd Elhamed Saad. All Rights Reserved.</p>
             </div>
         </div>
     </div>
-</section>
-<!-- End Experience Section -->
-
-<!-- Start Contact Section -->
-<section id="contact" class="contact">
-    <div class="content">
-        <div class="container bg-white py-5 px-5">
-            <div class="row">
-
-                <div class="form-heading mb-5">
-                    <h5>Get in Touch</h5>
-                </div>
-                <div class="info">
-                    <p>Feel free to reach out to discuss potential projects, opportunities, or just to say
-                        hello!</p>
-                </div>
-                <div class="contact">
-                    <div class="location d-flex align-items-center mb-3">
-                        <i class="fa-solid fa-map-marker-alt"></i>
-                        <span class="ps-3">Al-Khanka, Egypt</span>
-                    </div>
-                    <div class="phone d-flex align-items-center mb-3">
-                        <i class="fa-solid fa-phone"></i>
-                        <span class="ps-3">+20 105 003 9300</span>
-                    </div>
-                    <div class="email d-flex align-items-center mb-3">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span class="ps-3">abdel7med.saad@gmail.com</span>
-                    </div>
-                    <div class="globe d-flex align-items-center mb-3">
-                        <i class="fa-solid fa-globe"></i>
-                        <span class="ps-3">github.com/abd-elhamed-saad</span>
-                    </div>
-                </div>
-                <div class="socials d-flex align-items-center justify-content-center flex-wrap w-100 mt-4">
-                    <div class="d-flex justify-content-center w-100">
-                        <a href="https://www.linkedin.com/in/abd-el-hamed-saad/" target="_blank"
-                           class="social d-flex align-items-center justify-content-center me-5 mb-0 mx-2">
-                            <i class="fa-brands fa-linkedin fs-4"></i>
-                        </a>
-                        <a href="https://github.com/abd-elhamed-saad" target="_blank"
-                           class="social d-flex align-items-center justify-content-center me-5 mb-0 mx-2">
-                            <i class="fa-brands fa-github fs-4"></i>
-                        </a>
-                        <a href="https://www.facebook.com/Abd.Elh7med.Saad" target="_blank"
-                           class="social d-flex align-items-center justify-content-center me-5 mb-0 mx-2">
-                            <i class="fa-brands fa-facebook fs-4"></i>
-                        </a>
-                        <a href="https://wa.me/01050039300" target="_blank"
-                           class="social d-flex align-items-center justify-content-center mb-0 mx-2">
-                            <i class="fa-brands fa-whatsapp fs-4"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="copy text-center mt-5 text-white">
-            <p>&copy; 2026 Abd Elhamed Saad. All Rights Reserved.</p>
-            <p>Odoo Developer Portfolio</p>
-        </div>
-    </div>
-</section>
-<!-- End Contact Section -->
+</footer>
 
 <!-- Hidden Printable Version for PDF Generation -->
 <div id="printable-cv" style="display:none;">
@@ -480,7 +588,8 @@
         <div class="job">
             <h4>2017 - 2019 – Accountant</h4>
             <p>MSH for Tax Consultation and Accounting</p>
-            <p>- Managed tax accounting, company establishment, and electronic invoice registration. - Prepared monthly and annual tax returns, ensuring compliance with local regulations.</p>
+            <p>- Managed tax accounting, company establishment, and electronic invoice registration. - Prepared monthly
+                and annual tax returns, ensuring compliance with local regulations.</p>
         </div>
 
         <div class="job">
@@ -498,23 +607,29 @@
         <div class="job">
             <h4>10/2021 - 11/2022 – Odoo Developer</h4>
             <p>Capstone</p>
-            <p>- Customized and developed Odoo modules for CRM, HR, Invoice, Sales, and Purchase. - Enhanced system functionalities to streamline business processes. - Worked on printing customization.</p>
+            <p>- Customized and developed Odoo modules for CRM, HR, Invoice, Sales, and Purchase. - Enhanced system
+                functionalities to streamline business processes. - Worked on printing customization.</p>
         </div>
 
         <div class="job">
             <h4>12/2022 - 9/2024 – Odoo Developer</h4>
             <p>Digitec</p>
-            <p>- Customized Odoo modules including leave_type, sick_leave, payroll, attendance, work_time, purchase_request,
-            and stock_request. - Added new custom models, policies, and security rules for user-specific access. - Improved
-            system workflows for evening shift management, including policies for delays, overtime, and absences.</p>
+            <p>- Customized Odoo modules including leave_type, sick_leave, payroll, attendance, work_time,
+                purchase_request,
+                and stock_request. - Added new custom models, policies, and security rules for user-specific access. -
+                Improved
+                system workflows for evening shift management, including policies for delays, overtime, and
+                absences.</p>
         </div>
 
         <div class="job">
             <h4>10/2024 - Present – Odoo Developer</h4>
             <p>Knowledgebi</p>
-            <p>- Customize Odoo modules for HR, Leave, Loan, Time Work, Attendance, Project, and Task Management. - Enhance
-            portal user interfaces for employees to manage leave requests, loans, attendance, and project tasks. - security
-            policies and user access controls for different user roles.</p>
+            <p>- Customize Odoo modules for HR, Leave, Loan, Time Work, Attendance, Project, and Task Management. -
+                Enhance
+                portal user interfaces for employees to manage leave requests, loans, attendance, and project tasks. -
+                security
+                policies and user access controls for different user roles.</p>
         </div>
     </div>
 
@@ -523,48 +638,55 @@
 
         <div class="job">
             <h4>Sale</h4>
-            <p>Customized sales orders with dynamic product quotations, stock availability checks, and security warnings for high
-            prices, totals, and step-by-step sales approvals.</p>
+            <p>Customized sales orders with dynamic product quotations, stock availability checks, and security warnings
+                for high
+                prices, totals, and step-by-step sales approvals.</p>
         </div>
 
         <div class="job">
             <h4>Purchase</h4>
-            <p>Built a purchase request and approval process with multi-level authorization and alerts for budget compliance,
-            improving transparency and reducing errors.</p>
+            <p>Built a purchase request and approval process with multi-level authorization and alerts for budget
+                compliance,
+                improving transparency and reducing errors.</p>
         </div>
 
         <div class="job">
             <h4>Inventory</h4>
-            <p>Implemented secure inter-company warehouse transfers within the same Odoo system, with role-based approvals
-            and access controls.</p>
+            <p>Implemented secure inter-company warehouse transfers within the same Odoo system, with role-based
+                approvals
+                and access controls.</p>
         </div>
 
         <div class="job">
             <h4>Account</h4>
-            <p>Customized full accounting cycle: invoices, journals, and checks (issue, receive, endorse, bank settlement, customer-
-            to-customer transfers).</p>
+            <p>Customized full accounting cycle: invoices, journals, and checks (issue, receive, endorse, bank
+                settlement, customer-
+                to-customer transfers).</p>
         </div>
 
         <div class="job">
             <h4>Attendance</h4>
-            <p>Modified the Odoo system to handle evening shifts, including policies for delays, overtime, and absences</p>
+            <p>Modified the Odoo system to handle evening shifts, including policies for delays, overtime, and
+                absences</p>
         </div>
 
         <div class="job">
             <h4>Payroll</h4>
             <p>Built payroll system for 500+ employees (overtime, deductions, allocations) integrated with Attendance &
-            Timesheets.</p>
+                Timesheets.</p>
         </div>
 
         <div class="job">
             <h4>Portal</h4>
-            <p>- HR Leave , Loan , Time Work , Attendance , Project and Task - Improved user experience by creating intuitive and responsive portal interfaces.</p>
+            <p>- HR Leave , Loan , Time Work , Attendance , Project and Task - Improved user experience by creating
+                intuitive and responsive portal interfaces.</p>
         </div>
 
         <div class="job">
             <h4>Contracting</h4>
-            <p>Linked contracts with projects, managed progress billing, and tracked resource usage across subcontracts and main
-            contracts.</p>
+            <p>Linked contracts with projects, managed progress billing, and tracked resource usage across subcontracts
+                and main
+                contracts.</p>
         </div>
     </div>
 </div>

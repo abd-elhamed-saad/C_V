@@ -414,46 +414,204 @@ img {
 
 /* Updated progress bar styles for services section */
 .services .progress {
-    background-color: #cde1f8;
-    height: 10px;
+    background-color: #e9ecef;
+    height: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    height: 100%;
     position: relative;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
-    border-radius: 0;
+    border-radius: 10px;
+    animation: progressBarAnimation 1.5s ease-in-out;
 }
 
-.services .progress::after {
-    content: "";
-    position: absolute;
-    background-color: var(--main-color);
-    height: 10px;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
-    border-radius: 0;
+@keyframes progressBarAnimation {
+    from { width: 0; }
 }
 
-.services .progress.html::after {
+.progress-bar-python {
+    background: linear-gradient(90deg, #0078ff, #00aaff);
     width: 100%;
-    background-color: var(--main-color);
 }
 
-.services .progress.css::after {
+.progress-bar-postgres {
+    background: linear-gradient(90deg, #ff305b, #ff6b8b);
     width: 90%;
-    background-color: var(--main-color);
 }
 
-.services .progress.php::after {
+.progress-bar-html {
+    background: linear-gradient(90deg, #e34f26, #f16529);
+    width: 100%;
+}
+
+.progress-bar-css {
+    background: linear-gradient(90deg, #1572b6, #2196f3);
+    width: 100%;
+}
+
+.progress-bar-js {
+    background: linear-gradient(90deg, #f7df1e, #ffcb38);
     width: 80%;
-    background-color: var(--main-color);
 }
 
-.services .progress.js::after {
+.progress-bar-api {
+    background: linear-gradient(90deg, #8cc64f, #7dbd42);
     width: 70%;
-    background-color: var(--main-color);
+}
+
+.skill-percentage {
+    font-weight: 600;
+    color: #1e1e1e;
+    min-width: 50px;
+    text-align: right;
+}
+
+.skill-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-icon-python {
+    color: #3776ab;
+    font-size: 1.2em;
+}
+
+.skill-icon-database {
+    color: #336791;
+    font-size: 1.2em;
+}
+
+.skill-icon-html {
+    color: #e34f26;
+    font-size: 1.2em;
+}
+
+.skill-icon-css {
+    color: #1572b6;
+    font-size: 1.2em;
+}
+
+.skill-icon-js {
+    color: #f7df1e;
+    font-size: 1.2em;
+    filter: brightness(0.8);
+}
+
+.skill-icon-api {
+    color: #8cc64f;
+    font-size: 1.2em;
+}
+
+/* Random company border colors */
+.company-job.random-color-1 {
+    border-left: 3px solid #0078ff !important; /* Blue */
+}
+
+.company-job.random-color-2 {
+    border-left: 3px solid #28a745 !important; /* Green */
+}
+
+.company-job.random-color-3 {
+    border-left: 3px solid #ffc107 !important; /* Yellow */
+}
+
+.company-job.random-color-4 {
+    border-left: 3px solid #dc3545 !important; /* Red */
+}
+
+.company-job.random-color-5 {
+    border-left: 3px solid #6f42c1 !important; /* Purple */
+}
+
+.company-job.random-color-6 {
+    border-left: 3px solid #17a2b8 !important; /* Cyan */
+}
+
+.company-job.random-color-7 {
+    border-left: 3px solid #fd7e14 !important; /* Orange */
+}
+
+.company-job.random-color-8 {
+    border-left: 3px solid #20c997 !important; /* Teal */
+}
+
+.company-job.random-color-9 {
+    border-left: 3px solid #e83e8c !important; /* Pink */
+}
+
+.company-job.random-color-10 {
+    border-left: 3px solid #6c757d !important; /* Gray */
+}
+
+.company-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+    object-fit: cover;
+    border: 1px solid currentColor; /* Border matches parent's color */
+}
+
+/* Specific shadow colors for each company */
+.company-job.random-color-1 .company-logo {
+    box-shadow: 0 0 8px #0078ff; /* Blue shadow */
+}
+
+.company-job.random-color-2 .company-logo {
+    box-shadow: 0 0 8px #28a745; /* Green shadow */
+}
+
+.company-job.random-color-3 .company-logo {
+    box-shadow: 0 0 8px #ffc107; /* Yellow shadow */
+}
+
+.company-job.random-color-4 .company-logo {
+    box-shadow: 0 0 8px #dc3545; /* Red shadow */
+}
+
+.company-job.random-color-5 .company-logo {
+    box-shadow: 0 0 8px #6f42c1; /* Purple shadow */
+}
+
+.company-job.random-color-6 .company-logo {
+    box-shadow: 0 0 8px #17a2b8; /* Cyan shadow */
+}
+
+.company-job.random-color-7 .company-logo {
+    box-shadow: 0 0 8px #fd7e14; /* Orange shadow */
+}
+
+.company-job.random-color-8 .company-logo {
+    box-shadow: 0 0 8px #20c997; /* Teal shadow */
+}
+
+.company-job.random-color-9 .company-logo {
+    box-shadow: 0 0 8px #e83e8c; /* Pink shadow */
+}
+
+.company-job.random-color-10 .company-logo {
+    box-shadow: 0 0 8px #6c757d; /* Gray shadow */
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.image-container img {
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.03);
 }
 
 /* End Services Section */
@@ -1015,6 +1173,23 @@ img {
   line-height: 1.5;
 }
 
+/* Footer Styles */
+.footer {
+  margin-top: 0;
+  border-radius: 0;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.footer a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer a:hover {
+  color: #007bff !important;
+  transform: translateY(-2px);
+}
+
 /* Print-specific styles */
 @media print {
   body {
@@ -1027,5 +1202,9 @@ img {
     box-shadow: none;
     margin: 0;
     padding: 10mm;
+  }
+
+  .footer {
+    display: none;
   }
 }

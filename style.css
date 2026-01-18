@@ -884,6 +884,7 @@ img {
   margin: 0 0 5px 0;
   text-align: center;
   border-bottom: none;
+  font-weight: 700;
 }
 
 #printable-cv h2 {
@@ -892,18 +893,21 @@ img {
   margin: 20px 0 10px 0;
   padding-bottom: 5px;
   border-bottom: 2px solid #ff305b;
+  font-weight: 600;
 }
 
 #printable-cv h3 {
   font-size: 14pt;
   color: #111;
   margin: 15px 0 8px 0;
+  font-weight: 600;
 }
 
 #printable-cv h4 {
   font-size: 12pt;
   color: #111;
   margin: 10px 0 5px 0;
+  font-weight: 500;
 }
 
 #printable-cv p {
@@ -919,17 +923,30 @@ img {
   margin-bottom: 5px;
 }
 
+.cv-contact-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .cv-contact-info p {
   margin: 5px 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  color: #555;
+}
+
+.cv-contact-info i {
+  color: #ff305b;
+  width: 20px;
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  margin: 15px 0;
 }
 
 .skill-item {
@@ -937,6 +954,13 @@ img {
   border: 1px solid #eee;
   border-radius: 4px;
   background: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-item strong {
+  color: #111;
 }
 
 .job {
@@ -945,6 +969,23 @@ img {
   border-left: 3px solid #ff305b;
   background: #fafafa;
   border-radius: 0 4px 4px 0;
+}
+
+.job h4 {
+  color: #111;
+  margin: 0 0 5px 0;
+  font-size: 13pt;
+}
+
+.job p:nth-of-type(1) {
+  color: #ff305b;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.job p:last-child {
+  color: #666;
+  margin: 0;
 }
 
 .cv-section {
@@ -962,4 +1003,29 @@ img {
   margin-bottom: 20px;
   padding-bottom: 15px;
   border-bottom: 2px solid #ff305b;
+}
+
+.cv-section ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.cv-section li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* Print-specific styles */
+@media print {
+  body {
+    background: white;
+    padding: 0;
+    margin: 0;
+  }
+
+  #printable-cv {
+    box-shadow: none;
+    margin: 0;
+    padding: 10mm;
+  }
 }

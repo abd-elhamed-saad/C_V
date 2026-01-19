@@ -142,7 +142,7 @@ Abd-Elhamed-saad/
 
 ### Updating Company Logos
 1. Place company logos in the images/company/ directory
-2. Name them as companyname-logo.png (e.g., sbs-logo.png)
+2. Name them as building-company.png (e.g., sbs-logo.png)
 3. If no specific logo is provided, the system will use the default-company.png
 
 ### Modifying Colors

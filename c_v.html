@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abd Elhamed Saad - Resume Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 15mm;
+            background: white;
+        }
+
+        .resume-container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #ff305b;
+        }
+
+        .header h1 {
+            font-size: 24pt;
+            color: #111;
+            margin: 0 0 5px 0;
+            font-weight: bold;
+        }
+
+        .header h2 {
+            font-size: 18pt;
+            color: #ff305b;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #555;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section h3 {
+            font-size: 14pt;
+            color: #111;
+            margin: 15px 0 8px 0;
+            font-weight: bold;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .section ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        .section li {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        .job {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 3px solid #ff305b;
+            background: #fafafa;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .job h4 {
+            font-size: 12pt;
+            color: #111;
+            margin: 0 0 5px 0;
+            font-weight: 600;
+        }
+
+        .job p {
+            margin: 5px 0;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .skill-item {
+            padding: 8px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            background: #f9f9f9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-download {
+            background: #ff305b;
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-download:hover {
+            background: #e55555;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+        }
+
+        @media print {
+            body {
+                padding: 10mm;
+                margin: 0;
+            }
+            
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header">
+            <h1>Abd Elhamed Saad</h1>
+            <h2>Odoo Developer</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i> <span>Al-Khanka, Egypt</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i> <span>abdel7med.saad@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i> <span>+20 105 003 9300</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i> <span>github.com/abd-elhamed-saad</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Objective</h3>
+            <p>
+                Highly motivated Odoo Developer with 3+ years of experience in customizing and developing modules across
+                versions 15 → 18. Proficient in Python, PostgreSQL, XML, JavaScript and business automation.
+                Passionate about creating efficient solutions that drive business growth.
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>Personal Details</h3>
+            <ul>
+                <li><strong>Date of Birth:</strong> 25/03/1993</li>
+                <li><strong>Marital Status:</strong> Married</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Education</h3>
+            <div class="job">
+                <h4>2016 – B.A. in Geography</h4>
+                <p>Ain shams university</p>
+                <p>Good</p>
+            </div>
+            <div class="job">
+                <h4>2022 – Faculty of Commerce</h4>
+                <p>Cairo university</p>
+            </div>
+            <div class="job">
+                <h4>2025 – Course : Front-end Development</h4>
+                <p>Route</p>
+            </div>
+            <div class="job">
+                <h4>2025 – JavaScript – Guide with (Jonas Schmedtmann - In Progress)</h4>
+                <p>Udemy</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Knowledge With</h3>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <strong>Python, odoo framework, postgreSQL:</strong> <span>100%</span>
+                </div>
+                <div class="skill-item">
+                    <strong>Front-end, HTML, CSS, JavaScript:</strong> <span>80%</span>
+                </div>
+                <div class="skill-item">
+                    <strong>GitHub, Linux , odoo.sh:</strong> <span>100%</span>
+                </div>
+                <div class="skill-item">
+                    <strong>Rest API & XML:</strong> <span>60%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Work Experience</h3>
+
+            <div class="job">
+                <h4>2017 - 2019 – Accountant</h4>
+                <p>MSH for Tax Consultation and Accounting</p>
+                <p>- Managed tax accounting, company establishment, and electronic invoice registration. - Prepared
+                    monthly
+                    and annual tax returns, ensuring compliance with local regulations.</p>
+            </div>
+
+            <div class="job">
+                <h4>2019 - 2021 – Team Leader</h4>
+                <p>Breadfast</p>
+                <p>- Managed and assigned tasks to delivery personnel using the Odoo system.</p>
+            </div>
+
+            <div class="job">
+                <h4>2021 - 2021 – Freelance Odoo Developer</h4>
+                <p>Odoo</p>
+                <p>- Developed custom Odoo modules for CRM, Invoicing, and Sales</p>
+            </div>
+
+            <div class="job">
+                <h4>10/2021 - 11/2022 – Odoo Developer</h4>
+                <p>Capstone</p>
+                <p>- Customized and developed Odoo modules for CRM, HR, Invoice, Sales, and Purchase. - Enhanced system
+                    functionalities to streamline business processes. - Worked on printing customization.</p>
+            </div>
+
+            <div class="job">
+                <h4>12/2022 - 9/2024 – Odoo Developer</h4>
+                <p>Digitec</p>
+                <p>- Customized Odoo modules including leave_type, sick_leave, payroll, attendance, work_time,
+                    purchase_request,
+                    and stock_request. - Added new custom models, policies, and security rules for user-specific access.
+                    -
+                    Improved
+                    system workflows for evening shift management, including policies for delays, overtime, and
+                    absences.</p>
+            </div>
+
+            <div class="job">
+                <h4>10/2024 - Present – Odoo Developer</h4>
+                <p>Knowledgebi</p>
+                <p>- Customize Odoo modules for HR, Leave, Loan, Time Work, Attendance, Project, and Task Management. -
+                    Enhance
+                    portal user interfaces for employees to manage leave requests, loans, attendance, and project tasks.
+                    -
+                    security
+                    policies and user access controls for different user roles.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Projects</h3>
+
+            <div class="job">
+                <h4>Sale</h4>
+                <p>Customized sales orders with dynamic product quotations, stock availability checks, and security
+                    warnings
+                    for high
+                    prices, totals, and step-by-step sales approvals.</p>
+            </div>
+
+            <div class="job">
+                <h4>Purchase</h4>
+                <p>Built a purchase request and approval process with multi-level authorization and alerts for budget
+                    compliance,
+                    improving transparency and reducing errors.</p>
+            </div>
+
+            <div class="job">
+                <h4>Inventory</h4>
+                <p>Implemented secure inter-company warehouse transfers within the same Odoo system, with role-based
+                    approvals
+                    and access controls.</p>
+            </div>
+
+            <div class="job">
+                <h4>Account</h4>
+                <p>Customized full accounting cycle: invoices, journals, and checks (issue, receive, endorse, bank
+                    settlement, customer-
+                    to-customer transfers).</p>
+            </div>
+
+            <div class="job">
+                <h4>Attendance</h4>
+                <p>Modified the Odoo system to handle evening shifts, including policies for delays, overtime, and
+                    absences</p>
+            </div>
+
+            <div class="job">
+                <h4>Payroll</h4>
+                <p>Built payroll system for 500+ employees (overtime, deductions, allocations) integrated with
+                    Attendance &
+                    Timesheets.</p>
+            </div>
+
+            <div class="job">
+                <h4>Portal</h4>
+                <p>- HR Leave , Loan , Time Work , Attendance , Project and Task - Improved user experience by creating
+                    intuitive and responsive portal interfaces.</p>
+            </div>
+
+            <div class="job">
+                <h4>Contracting</h4>
+                <p>Linked contracts with projects, managed progress billing, and tracked resource usage across
+                    subcontracts
+                    and main
+                    contracts.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-container no-print">
+        <button class="btn btn-download" onclick="generatePDF()">
+            <i class="fas fa-download me-2"></i> Download CV
+        </button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        // PDF Generation Function
+        function generatePDF() {
+            // Get the resume container content
+            const element = document.querySelector('.resume-container');
+
+            // Define PDF options to match the template style
+            const options = {
+                margin: [10, 10, 10, 10],
+                filename: 'Abd_Elhamed_Saad_CV.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: {
+                    scale: 3,
+                    useCORS: true,
+                    logging: false,
+                    dpi: 300,
+                    letterRendering: true
+                },
+                jsPDF: {
+                    unit: 'mm',
+                    format: 'a4',
+                    orientation: 'portrait',
+                    compress: true
+                },
+                pagebreak: { mode: ['avoid-all'] }
+            };
+
+            // Generate the PDF
+            html2pdf()
+                .set(options)
+                .from(element)
+                .save()
+                .catch(function (error) {
+                    console.error('PDF generation error:', error);
+                    alert('Error generating PDF. Please try again.');
+                });
+        }
+    </script>
+</body>
+</html>

@@ -37,7 +37,7 @@ body {
     align-items: center;
 
     padding-bottom: 12px;
-    border-bottom: 2px solid #FFD700;
+    border-bottom: 2px solid #ff305b;
 }
 
 /* PHOTO */
@@ -46,7 +46,7 @@ body {
     height: 88px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #FFD700;
+    border: 3px solid #ff305b;
 }
 
 /* NAME + TITLE */
@@ -63,7 +63,7 @@ body {
     font-weight: 600;
     letter-spacing: 1.2px;
     text-transform: uppercase;
-    color: #FFD700;
+    color: #ff305b;
 }
 
 /* =====================================================
@@ -77,7 +77,7 @@ body {
     margin-top: 10px;
     padding-bottom: 12px;
 
-    border-bottom: 1px solid #FFD700;
+    border-bottom: 1px solid #ff305b;
 }
 
 .info-column {
@@ -104,7 +104,7 @@ body {
    SECTION DIVIDER
 ===================================================== */
 .divider {
-    border-bottom: 2px solid #FFD700;
+    border-bottom: 2px solid #ff305b;
     margin: 18px 0;
 }
 
@@ -118,7 +118,7 @@ body {
 .section h3 {
     font-size: 13pt;
     font-weight: 700;
-    color: #FFD700;
+    color: #ff305b;
 
     margin-bottom: 10px;
     padding-bottom: 5px;
@@ -154,7 +154,7 @@ body {
     top: 10px;
     bottom: 10px;
     width: 3px;
-    background: #FFD700;
+    background: #ff305b;
     border-radius: 2px;
 }
 

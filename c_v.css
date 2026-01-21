@@ -32,18 +32,18 @@ body {
 ===================================================== */
 .header-container {
     display: grid;
-    grid-template-columns: 90px 1fr;
-    column-gap: 18px;
+    grid-template-columns: 70px 1fr;
+    column-gap: 12px;
     align-items: center;
 
-    padding-bottom: 12px;
+    padding-bottom: 8px;
     border-bottom: 2px solid #ff305b;
 }
 
 /* PHOTO */
 .profile-photo {
-    width: 88px;
-    height: 88px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #ff305b;
@@ -72,10 +72,10 @@ body {
 .info-grid {
     display: grid;
     grid-template-columns: 1.1fr 1.4fr 1.5fr;
-    gap: 14px;
+    gap: 10px;
 
-    margin-top: 10px;
-    padding-bottom: 12px;
+    margin-top: 8px;
+    padding-bottom: 8px;
 
     border-bottom: 1px solid #ff305b;
 }
@@ -83,19 +83,19 @@ body {
 .info-column {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
 }
 
 .contact-item {
     display: flex;
-    gap: 8px;
-    font-size: 10pt;
-    line-height: 1.3;
+    gap: 6px;
+    font-size: 9.5pt;
+    line-height: 1.25;
     color: #555;
 }
 
 .contact-item strong {
-    min-width: 110px;
+    min-width: 90px;
     font-weight: 600;
     color: #222;
 }
@@ -105,34 +105,34 @@ body {
 ===================================================== */
 .divider {
     border-bottom: 2px solid #ff305b;
-    margin: 18px 0;
+    margin: 12px 0;
 }
 
 /* =====================================================
    SECTIONS
 ===================================================== */
 .section {
-    margin-bottom: 22px;
+    margin-bottom: 16px;
 }
 
 .section h3 {
-    font-size: 13pt;
+    font-size: 12pt;
     font-weight: 700;
     color: #ff305b;
 
-    margin-bottom: 10px;
-    padding-bottom: 5px;
+    margin-bottom: 6px;
+    padding-bottom: 3px;
 
     border-bottom: 1px solid #ededed;
     text-transform: uppercase;
-    letter-spacing: 1.1px;
+    letter-spacing: 1px;
 }
 
 .section p {
-    font-size: 10.5pt;
-    line-height: 1.55;
+    font-size: 10pt;
+    line-height: 1.4;
     color: #555;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 
 /* =====================================================
@@ -162,38 +162,235 @@ body {
     font-size: 11pt;
     font-weight: 700;
     color: #222;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
 }
 
 .job p {
     font-size: 10pt;
-    line-height: 1.45;
+    line-height: 1.3;
     color: #555;
+    margin-bottom: 5px;
+}
+
+.job-details {
+    font-size: 9pt;
+    font-weight: 600;
+    color: #ff305b;
+    margin: 2px 0 4px 0;
+}
+
+.education-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.education-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    color: #555;
+}
+
+.education-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ff305b;
+    font-size: 16px;
+    top: 0;
 }
 
 /* =====================================================
    SKILLS
 ===================================================== */
-.skills-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-}
-
-.skill-item {
+.skills-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 8px 12px;
-    background: #f5f5f5;
-    border-radius: 6px;
-
-    font-size: 10pt;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.skill-item strong {
+.skill {
+    margin-bottom: 0.8rem !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.skill-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
     color: #222;
+    font-size: 10pt;
+    flex: 1;
+}
+
+.skill-icon-python {
+    color: #3572A5;
+    font-size: 12px;
+}
+
+.skill-icon-database {
+    color: #336791;
+    font-size: 12px;
+}
+
+.skill-icon-html {
+    color: #E34F26;
+    font-size: 12px;
+}
+
+.skill-icon-css {
+    color: #1572B6;
+    font-size: 12px;
+}
+
+.skill-icon-js {
+    color: #F7DF1E;
+    font-size: 12px;
+}
+
+.skill-icon-api {
+    color: #0077B5;
+    font-size: 12px;
+}
+
+.skill-percentage {
+    font-weight: 700;
+    color: #ff305b;
+    font-size: 10pt;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.progress {
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 3px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+    background: linear-gradient(to right, #ff305b, #ff6b8b);
+    height: 100%;
+    border-radius: 4px;
+}
+
+.progress-bar-python {
+    background: linear-gradient(to right, #3572A5, #5ca9dd);
+}
+
+.progress-bar-postgres {
+    background: linear-gradient(to right, #336791, #5ca0c4);
+}
+
+.progress-bar-html {
+    background: linear-gradient(to right, #E34F26, #f08552);
+}
+
+.progress-bar-css {
+    background: linear-gradient(to right, #1572B6, #4a96d1);
+}
+
+.progress-bar-js {
+    background: linear-gradient(to right, #F7DF1E, #f9e765);
+}
+
+.progress-bar-api {
+    background: linear-gradient(to right, #0077B5, #33a1de);
+}
+
+/* =====================================================
+   COMPANY JOBS STYLING
+===================================================== */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 12px;
+    margin-bottom: 20px;
+}
+
+.col-md-6.offset-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-left: 25%;
+    padding: 0 12px;
+    margin-bottom: 20px;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.p-3 {
+    padding: 1rem !important;
+}
+
+.h-100 {
+    height: 100% !important;
+}
+
+.company-job {
+    background: #f8f9fa !important;
+    border-radius: 0 4px 4px 0 !important;
+}
+
+.random-color-1 {
+    border-left: 4px solid #FF6B6B;
+}
+
+.random-color-2 {
+    border-left: 4px solid #4ECDC4;
+}
+
+.random-color-3 {
+    border-left: 4px solid #45B7D1;
+}
+
+.random-color-4 {
+    border-left: 4px solid #FFA07A;
+}
+
+.random-color-5 {
+    border-left: 4px solid #98FB98;
+}
+
+.random-color-7 {
+    border-left: 4px solid #DDA0DD;
+}
+
+.company-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.job h4 img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 /* =====================================================
@@ -206,6 +403,51 @@ body {
 
     .resume-container {
         margin: 0;
-        padding: 18mm 16mm;
+        padding: 15mm 12mm;
+        font-size: 0.9em;
+    }
+
+    .job {
+        margin-bottom: 8px !important;
+        padding: 6px 8px !important;
+    }
+
+    .skill {
+        margin-bottom: 0.6rem !important;
+    }
+
+    .progress {
+        height: 6px !important;
+        margin-top: 2px !important;
+        border: 1px solid #ddd !important;
+    }
+
+    .progress-bar {
+        border-radius: 3px !important;
+        background: #ff305b !important;
+    }
+
+    .progress-bar-python {
+        background: #3572A5 !important;
+    }
+
+    .progress-bar-postgres {
+        background: #336791 !important;
+    }
+
+    .progress-bar-html {
+        background: #E34F26 !important;
+    }
+
+    .progress-bar-css {
+        background: #1572B6 !important;
+    }
+
+    .progress-bar-js {
+        background: #F7DF1E !important;
+    }
+
+    .progress-bar-api {
+        background: #0077B5 !important;
     }
 }

@@ -3,152 +3,458 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Abd Elhamed Saad - CV</title>
-    <link rel="stylesheet" href="css/cv-paper.css">
+    <title>Abd Elhamed Saad – CV</title>
+    <style>
+        @page { size: A4; margin: 0; }
+
+        html, body {
+            margin: 0; padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #111;
+            background: #555;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            background: #fff;
+            width: 210mm;
+            height: 297mm;
+            margin: 14px auto;
+            padding: 9mm 13mm 6mm;
+            box-sizing: border-box;
+            overflow: hidden;
+            box-shadow: 0 3px 20px rgba(0,0,0,.5);
+        }
+
+        @media print {
+            html, body {
+                background: #fff;
+                margin: 0;
+                padding: 0;
+            }
+            .page {
+                position: fixed;
+                top: 0;
+                left: 0;
+                margin: 0;
+                box-shadow: none;
+                width: 210mm;
+                height: 297mm;
+            }
+        }
+    </style>
 </head>
 <body>
-<main class="cv-page page">
-    <header class="top-header">
-        <img class="profile-photo" src="img/abdelhamed.png" alt="Abd Elhamed Saad">
-        <div class="head-main">
-            <h1>Abd Elhamed Saad</h1>
-            <p class="title">Odoo Developer</p>
-            <p class="summary">
-                Odoo Developer with 3+ years of ERP experience in HR, Payroll, Sales, Inventory,
-                Attendance, Portal, and business automation.
-            </p>
-        </div>
-        <div class="head-contact">
-            <p>Al-Khanka, Egypt</p>
-            <p>+20 105 003 9300</p>
-            <p>abdel7med.saad@gmail.com</p>
-            <p>linkedin.com/in/abd-el-hamed-saad</p>
-            <p>github.com/abd-elhamed-saad</p>
-        </div>
-    </header>
+<div class="page">
 
-    <section class="content-grid">
-        <aside class="left-col">
-            <section class="card">
-                <h2>Skills</h2>
+<!-- ══════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════ -->
+<div style="text-align:center; padding-bottom:7px; margin-bottom:7px; border-bottom:2.5px solid #111;">
 
-                <div class="skill-row"><span>Python / Odoo</span><b>95%</b></div>
-                <div class="skill-bar"><i style="width:95%"></i></div>
+    <div style="font-family:'Segoe UI',Arial,sans-serif; font-size:32px; font-weight:900;
+                letter-spacing:3px; text-transform:uppercase; color:#000; line-height:1.1; margin-bottom:3px;">
+        Abd Elhamed Saad
+    </div>
 
-                <div class="skill-row"><span>PostgreSQL</span><b>90%</b></div>
-                <div class="skill-bar"><i style="width:90%"></i></div>
+    <div style="font-family:'Segoe UI',Arial,sans-serif; font-size:14px; font-weight:700;
+                color:#333; letter-spacing:0.8px; margin-bottom:4px;">
+        Odoo Developer
+    </div>
 
-                <div class="skill-row"><span>JavaScript</span><b>80%</b></div>
-                <div class="skill-bar"><i style="width:80%"></i></div>
+    <div style="font-family:'Segoe UI',Arial,sans-serif; font-size:11.5px; font-weight:600;
+                color:#222; line-height:1.6;">
+        &#9993;&nbsp;abdel7med.saad@gmail.com
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        &#9742;&nbsp;+20 105 003 9300
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        Al-Khanka, Egypt
+    </div>
 
-                <div class="skill-row"><span>XML / REST API</span><b>85%</b></div>
-                <div class="skill-bar"><i style="width:85%"></i></div>
+    <div style="font-family:'Segoe UI',Arial,sans-serif; font-size:11.5px; font-weight:600; color:#222;">
+        linkedin.com/in/abd-el-hamed-saad
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        github.com/abd-elhamed-saad
+    </div>
 
-                <div class="skill-row"><span>HTML / CSS</span><b>90%</b></div>
-                <div class="skill-bar"><i style="width:90%"></i></div>
+</div>
 
-                <div class="skill-row"><span>ERP Analysis</span><b>88%</b></div>
-                <div class="skill-bar"><i style="width:88%"></i></div>
-            </section>
 
-            <section class="card">
-                <h2>Core Services</h2>
-                <ul>
-                    <li>Custom module development</li>
-                    <li>Business workflow automation</li>
-                    <li>ERP integration and migration</li>
-                    <li>Portal and report customization</li>
-                </ul>
-            </section>
+<!-- ══════════════════════════════════════════
+     SUMMARY
+══════════════════════════════════════════ -->
+<div style="font-family:'Segoe UI',Arial,sans-serif; font-size:13px; font-weight:900;
+            text-transform:uppercase; letter-spacing:1.2px; color:#000;
+            border-bottom:2px solid #111; padding-bottom:3px; margin-bottom:4px;">
+    Summary
+</div>
 
-            <section class="card">
-                <h2>Education</h2>
-                <div class="edu-item">
-                    <p><strong>B.A. in Geography</strong></p>
-                    <p class="muted">Ain Shams University (2016)</p>
-                </div>
-                <div class="edu-item">
-                    <p><strong>Professional Development</strong></p>
-                    <p class="muted">Additional Studies - Faculty of Commerce, Cairo University (2022)</p>
-                </div>
-                <div class="edu-item">
-                    <p><strong>Front-End Development</strong></p>
-                    <p class="muted">Route (2025)</p>
-                </div>
-                <div class="edu-item">
-                    <p><strong>JavaScript Course</strong></p>
-                    <p class="muted">Udemy - Jonas Schmedtmann (In Progress)</p>
-                </div>
-            </section>
+<div style="font-family:'Segoe UI',Arial,sans-serif; font-size:11px; line-height:1.45;
+            text-align:justify; color:#222; margin-bottom:1px;">
+    Odoo Developer with 3+ years of ERP experience across HR, Payroll, Sales, Inventory, Attendance,
+    Portal, and business automation. Proven track record delivering customized Odoo implementations
+    (v15–v19), workflow optimizations, and 2 published modules on the Odoo App Store.
+</div>
 
-            <section class="card">
-                <h2>Achievements</h2>
-                <ul>
-                    <li>Delivered ERP implementations for Odoo 15 to 19.</li>
-                    <li>Automated approval and attendance workflows.</li>
-                    <li>Built scalable portal and reporting solutions.</li>
-                </ul>
-            </section>
-        </aside>
 
-        <section class="right-col card">
-            <h2>Work Experience</h2>
+<!-- ══════════════════════════════════════════
+     EXPERIENCE
+══════════════════════════════════════════ -->
+<div style="font-family:'Segoe UI',Arial,sans-serif; font-size:13px; font-weight:900;
+            text-transform:uppercase; letter-spacing:1.2px; color:#000;
+            border-bottom:2px solid #111; padding-bottom:3px; margin:7px 0 4px;">
+    Experience
+</div>
 
-            <article class="job">
-                <img src="img/company/sb5_superior_business_solutions_sbs_logo.jpg" alt="SBS" class="company-logo">
-                <div>
-                    <div class="job-head"><strong>SBS - Superior Business Solutions</strong><span>2025 - Present</span></div>
-                    <p class="job-role">Odoo Developer</p>
-                    <p>ERP customizations and process optimization for business operations.</p>
-                </div>
-            </article>
 
-            <article class="job">
-                <img src="img/company/knowledgebi_logo.jpg" alt="Knowledgebi" class="company-logo">
-                <div>
-                    <div class="job-head"><strong>Knowledgebi</strong><span>10/2024 - 9/2025</span></div>
-                    <p class="job-role">Odoo Developer</p>
-                    <p>Built HR, Leave, Loan, Attendance, Projects, and Portal modules.</p>
-                </div>
-            </article>
+<!-- ── SBS ── -->
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:4px;">
+  <tr>
+    <td width="30" valign="top" style="padding-right:7px; padding-top:1px;">
+      <img src="img/company/sb5_superior_business_solutions_sbs_logo.jpg"
+           width="24" height="24"
+           style="width:24px;height:24px;border-radius:50%;object-fit:cover;border:1px solid #ccc;display:block;"
+           alt="SBS">
+    </td>
+    <td valign="top">
+      <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:12px;font-weight:700;color:#000;">
+              Odoo Developer
+          </td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
+                     color:#444;text-align:right;white-space:nowrap;">
+              2025 – Present
+          </td>
+        </tr>
+      </table>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;
+                  color:#555;margin-bottom:2px;">SBS – Superior Business Solutions</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;
+                  padding-left:10px;">
+          &bull; ERP customizations and process optimization across multiple Odoo modules for enterprise clients.
+      </div>
+    </td>
+  </tr>
+</table>
 
-            <article class="job">
-                <img src="img/company/digitec.jpg" alt="Digitec" class="company-logo">
-                <div>
-                    <div class="job-head"><strong>Digitec</strong><span>12/2022 - 9/2024</span></div>
-                    <p class="job-role">Odoo Developer</p>
-                    <p>Customized payroll, attendance, leave, stock, and purchase workflows.</p>
-                </div>
-            </article>
+<!-- ── Knowledgebi ── -->
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:4px;">
+  <tr>
+    <td width="30" valign="top" style="padding-right:7px; padding-top:1px;">
+      <img src="img/company/knowledgebi_logo.jpg"
+           width="24" height="24"
+           style="width:24px;height:24px;border-radius:50%;object-fit:cover;border:1px solid #ccc;display:block;"
+           alt="Knowledgebi">
+    </td>
+    <td valign="top">
+      <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:12px;font-weight:700;color:#000;">
+              Odoo Developer
+          </td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
+                     color:#444;text-align:right;white-space:nowrap;">
+              Oct 2024 – Sep 2025
+          </td>
+        </tr>
+      </table>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;
+                  color:#555;margin-bottom:2px;">Knowledgebi</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;padding-left:10px;">
+          &bull; Built HR, Leave, Loan, Attendance, Projects, and Portal modules with full customization.
+      </div>
+    </td>
+  </tr>
+</table>
 
-            <article class="job">
-                <img src="img/company/capstone_selution.jpg" alt="Capstone" class="company-logo">
-                <div>
-                    <div class="job-head"><strong>Capstone</strong><span>10/2021 - 11/2022</span></div>
-                    <p class="job-role">Odoo Developer</p>
-                    <p>Enhanced CRM, HR, Invoice, Sales, and Purchase modules.</p>
-                </div>
-            </article>
+<!-- ── Digitec ── -->
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:4px;">
+  <tr>
+    <td width="30" valign="top" style="padding-right:7px; padding-top:1px;">
+      <img src="img/company/digitec.jpg"
+           width="24" height="24"
+           style="width:24px;height:24px;border-radius:50%;object-fit:cover;border:1px solid #ccc;display:block;"
+           alt="Digitec">
+    </td>
+    <td valign="top">
+      <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:12px;font-weight:700;color:#000;">
+              Odoo Developer
+          </td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
+                     color:#444;text-align:right;white-space:nowrap;">
+              Dec 2022 – Sep 2024
+          </td>
+        </tr>
+      </table>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;
+                  color:#555;margin-bottom:2px;">Digitec</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;padding-left:10px;">
+          &bull; Customized payroll, attendance, leave, stock, and purchase workflows; improved efficiency.
+      </div>
+    </td>
+  </tr>
+</table>
 
-            <article class="job">
-                <img src="img/company/building-company.png" alt="Freelance" class="company-logo">
-                <div>
-                    <div class="job-head"><strong>Freelance Odoo Developer</strong><span>2021</span></div>
-                    <p class="job-role">Odoo Developer</p>
-                    <p>Developed custom modules for CRM, Invoicing, and Sales.</p>
-                </div>
-            </article>
+<!-- ── Capstone ── -->
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:4px;">
+  <tr>
+    <td width="30" valign="top" style="padding-right:7px; padding-top:1px;">
+      <img src="img/company/capstone_selution.jpg"
+           width="24" height="24"
+           style="width:24px;height:24px;border-radius:50%;object-fit:cover;border:1px solid #ccc;display:block;"
+           alt="Capstone">
+    </td>
+    <td valign="top">
+      <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:12px;font-weight:700;color:#000;">
+              Odoo Developer
+          </td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
+                     color:#444;text-align:right;white-space:nowrap;">
+              Oct 2021 – Nov 2022
+          </td>
+        </tr>
+      </table>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;
+                  color:#555;margin-bottom:2px;">Capstone</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;padding-left:10px;">
+          &bull; Enhanced CRM, HR, Invoice, Sales, and Purchase modules for diverse client requirements.
+      </div>
+    </td>
+  </tr>
+</table>
 
-            <article class="job">
-                <img src="img/company/Bradfast.jpg" alt="Breadfast" class="company-logo">
-                <div>
-                    <div class="job-head"><strong>Breadfast</strong><span>2019 - 2021</span></div>
-                    <p class="job-role">Team Leader</p>
-                    <p>Managed and assigned delivery tasks through Odoo workflows.</p>
-                </div>
-            </article>
-        </section>
-    </section>
-</main>
+<!-- ── Breadfast ── -->
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:4px;">
+  <tr>
+    <td width="30" valign="top" style="padding-right:7px; padding-top:1px;">
+      <img src="img/company/Bradfast.jpg"
+           width="24" height="24"
+           style="width:24px;height:24px;border-radius:50%;object-fit:cover;border:1px solid #ccc;display:block;"
+           alt="Breadfast">
+    </td>
+    <td valign="top">
+      <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:12px;font-weight:700;color:#000;">
+              Team Leader
+          </td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
+                     color:#444;text-align:right;white-space:nowrap;">
+              2019 – 2021
+          </td>
+        </tr>
+      </table>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;
+                  color:#555;margin-bottom:2px;">Breadfast</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;padding-left:10px;">
+          &bull; Managed delivery teams and coordinated tasks through Odoo workflows; first ERP exposure.
+      </div>
+    </td>
+  </tr>
+</table>
+
+
+<!-- ══════════════════════════════════════════
+     SKILLS
+══════════════════════════════════════════ -->
+<div style="font-family:'Segoe UI',Arial,sans-serif; font-size:13px; font-weight:900;
+            text-transform:uppercase; letter-spacing:1.2px; color:#000;
+            border-bottom:2px solid #111; padding-bottom:3px; margin:7px 0 5px;">
+    Skills
+</div>
+
+<!-- 2-column skills, each: name/% row + full-width bar -->
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="49%" valign="top" style="padding-right:10px;">
+
+      <!-- Skill: Python/Odoo -->
+      <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:4px;">
+        <tr>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">
+              Python / Odoo
+          </td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
+                     color:#444;text-align:right;">95%</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding-top:2px;">
+            <div style="height:5px;background:#ddd;border-radius:3px;">
+              <div style="width:95%;height:5px;background:#222;border-radius:3px;"></div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Skill: HTML/CSS -->
+      <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:4px;">
+        <tr>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">
+              HTML / CSS
+          </td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
+                     color:#444;text-align:right;">90%</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding-top:2px;">
+            <div style="height:5px;background:#ddd;border-radius:3px;">
+              <div style="width:90%;height:5px;background:#222;border-radius:3px;"></div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Skill: PostgreSQL -->
+      <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">
+              PostgreSQL
+          </td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
+                     color:#444;text-align:right;">90%</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding-top:2px;">
+            <div style="height:5px;background:#ddd;border-radius:3px;">
+              <div style="width:90%;height:5px;background:#222;border-radius:3px;"></div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+    </td>
+    <td width="2%"></td>
+    <td width="49%" valign="top">
+
+      <!-- Skill: XML/REST API -->
+      <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:4px;">
+        <tr>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">
+              XML / REST API
+          </td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
+                     color:#444;text-align:right;">85%</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding-top:2px;">
+            <div style="height:5px;background:#ddd;border-radius:3px;">
+              <div style="width:85%;height:5px;background:#222;border-radius:3px;"></div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Skill: JavaScript -->
+      <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:4px;">
+        <tr>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">
+              JavaScript / OWL
+          </td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
+                     color:#444;text-align:right;">75%</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding-top:2px;">
+            <div style="height:5px;background:#ddd;border-radius:3px;">
+              <div style="width:75%;height:5px;background:#222;border-radius:3px;"></div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Skill: ERP Analysis -->
+      <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">
+              ERP Analysis
+          </td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
+                     color:#444;text-align:right;">88%</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding-top:2px;">
+            <div style="height:5px;background:#ddd;border-radius:3px;">
+              <div style="width:88%;height:5px;background:#222;border-radius:3px;"></div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>
+
+<!-- Languages – one row -->
+<div style="font-family:'Segoe UI',Arial,sans-serif; font-size:11px; font-weight:600;
+            color:#333; margin-top:5px; padding-top:4px; border-top:1px solid #ddd;">
+    &#127760;&nbsp;
+    <span style="font-weight:700;">Arabic</span> (Native)
+    &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <span style="font-weight:700;">English</span> (Professional)
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     ODOO APPS PUBLISHED
+══════════════════════════════════════════ -->
+<div style="font-family:'Segoe UI',Arial,sans-serif; font-size:13px; font-weight:900;
+            text-transform:uppercase; letter-spacing:1.2px; color:#000;
+            border-bottom:2px solid #111; padding-bottom:3px; margin:7px 0 4px;">
+    Odoo Apps Published
+</div>
+
+<div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;
+            padding-left:10px; margin-bottom:2px;">
+    &bull; <strong><a href="https://apps.odoo.com/apps/modules/19.0/dynamic_state_approval"
+       target="_blank" style="color:#014f7a;text-decoration:none;">Dynamic State Approval</a></strong>
+    – Dynamic workflow engine for multi-step state approvals in Odoo 18 & 19.
+</div>
+<div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;padding-left:10px;">
+    &bull; <strong><a href="https://apps.odoo.com/apps/modules/19.0/notification_manager"
+       target="_blank" style="color:#014f7a;text-decoration:none;">Notification Manager</a></strong>
+    – Advanced notification management system for automated alerts in Odoo 18 & 19.
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     EDUCATION & CERTIFICATES
+══════════════════════════════════════════ -->
+<div style="font-family:'Segoe UI',Arial,sans-serif; font-size:13px; font-weight:900;
+            text-transform:uppercase; letter-spacing:1.2px; color:#000;
+            border-bottom:2px solid #111; padding-bottom:3px; margin:7px 0 4px;">
+    Education &amp; Certificates
+</div>
+
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="34%" valign="top" style="padding-right:8px;">
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#000;">
+          Front-End Development</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;color:#555;">
+          Route Academy – 2025</div>
+    </td>
+    <td width="34%" valign="top" style="padding-right:8px;">
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#000;">
+          JavaScript Course</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;color:#555;">
+          Udemy (Jonas Schmedtmann) – 2025</div>
+    </td>
+    <td width="32%" valign="top">
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#000;">
+          B.A. in Geography</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;color:#555;">
+          Ain Shams University – 2016</div>
+    </td>
+  </tr>
+</table>
+
+
+</div>
 </body>
 </html>

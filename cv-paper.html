@@ -7,46 +7,38 @@
     <style>
         @page { size: A4; margin: 0; }
 
-        html, body {
-            margin: 0; padding: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            color: #111;
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html {
             background: #555;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
 
-        .page {
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #111;
             background: #fff;
             width: 210mm;
             height: 297mm;
             margin: 14px auto;
             padding: 9mm 13mm 6mm;
-            box-sizing: border-box;
             overflow: hidden;
             box-shadow: 0 3px 20px rgba(0,0,0,.5);
         }
 
         @media print {
-            html, body {
-                background: #fff;
-                margin: 0;
-                padding: 0;
-            }
-            .page {
-                position: fixed;
-                top: 0;
-                left: 0;
-                margin: 0;
-                box-shadow: none;
-                width: 210mm;
-                height: 297mm;
+            html { background: #fff; }
+            body {
+                margin: 0 !important;
+                box-shadow: none !important;
+                width: 210mm !important;
+                height: 297mm !important;
             }
         }
     </style>
 </head>
 <body>
-<div class="page">
 
 <!-- ══════════════════════════════════════════
      HEADER
@@ -107,7 +99,6 @@
     Experience
 </div>
 
-
 <!-- ── SBS ── -->
 <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:4px;">
   <tr>
@@ -120,21 +111,12 @@
     <td valign="top">
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:12px;font-weight:700;color:#000;">
-              Odoo Developer
-          </td>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
-                     color:#444;text-align:right;white-space:nowrap;">
-              2025 – Present
-          </td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:12px;font-weight:700;color:#000;">Odoo Developer</td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;color:#444;text-align:right;white-space:nowrap;">2025 – Present</td>
         </tr>
       </table>
-      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;
-                  color:#555;margin-bottom:2px;">SBS – Superior Business Solutions</div>
-      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;
-                  padding-left:10px;">
-          &bull; ERP customizations and process optimization across multiple Odoo modules for enterprise clients.
-      </div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;color:#555;margin-bottom:2px;">SBS – Superior Business Solutions</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;padding-left:10px;">&bull; ERP customizations and process optimization across multiple Odoo modules for enterprise clients.</div>
     </td>
   </tr>
 </table>
@@ -151,20 +133,12 @@
     <td valign="top">
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:12px;font-weight:700;color:#000;">
-              Odoo Developer
-          </td>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
-                     color:#444;text-align:right;white-space:nowrap;">
-              Oct 2024 – Sep 2025
-          </td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:12px;font-weight:700;color:#000;">Odoo Developer</td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;color:#444;text-align:right;white-space:nowrap;">Oct 2024 – Sep 2025</td>
         </tr>
       </table>
-      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;
-                  color:#555;margin-bottom:2px;">Knowledgebi</div>
-      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;padding-left:10px;">
-          &bull; Built HR, Leave, Loan, Attendance, Projects, and Portal modules with full customization.
-      </div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;color:#555;margin-bottom:2px;">Knowledgebi</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;padding-left:10px;">&bull; Built HR, Leave, Loan, Attendance, Projects, and Portal modules with full customization.</div>
     </td>
   </tr>
 </table>
@@ -181,20 +155,12 @@
     <td valign="top">
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:12px;font-weight:700;color:#000;">
-              Odoo Developer
-          </td>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
-                     color:#444;text-align:right;white-space:nowrap;">
-              Dec 2022 – Sep 2024
-          </td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:12px;font-weight:700;color:#000;">Odoo Developer</td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;color:#444;text-align:right;white-space:nowrap;">Dec 2022 – Sep 2024</td>
         </tr>
       </table>
-      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;
-                  color:#555;margin-bottom:2px;">Digitec</div>
-      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;padding-left:10px;">
-          &bull; Customized payroll, attendance, leave, stock, and purchase workflows; improved efficiency.
-      </div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;color:#555;margin-bottom:2px;">Digitec</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;padding-left:10px;">&bull; Customized payroll, attendance, leave, stock, and purchase workflows; improved efficiency.</div>
     </td>
   </tr>
 </table>
@@ -211,20 +177,12 @@
     <td valign="top">
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:12px;font-weight:700;color:#000;">
-              Odoo Developer
-          </td>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
-                     color:#444;text-align:right;white-space:nowrap;">
-              Oct 2021 – Nov 2022
-          </td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:12px;font-weight:700;color:#000;">Odoo Developer</td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;color:#444;text-align:right;white-space:nowrap;">Oct 2021 – Nov 2022</td>
         </tr>
       </table>
-      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;
-                  color:#555;margin-bottom:2px;">Capstone</div>
-      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;padding-left:10px;">
-          &bull; Enhanced CRM, HR, Invoice, Sales, and Purchase modules for diverse client requirements.
-      </div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;color:#555;margin-bottom:2px;">Capstone</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;padding-left:10px;">&bull; Enhanced CRM, HR, Invoice, Sales, and Purchase modules for diverse client requirements.</div>
     </td>
   </tr>
 </table>
@@ -241,20 +199,12 @@
     <td valign="top">
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:12px;font-weight:700;color:#000;">
-              Team Leader
-          </td>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
-                     color:#444;text-align:right;white-space:nowrap;">
-              2019 – 2021
-          </td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:12px;font-weight:700;color:#000;">Team Leader</td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;color:#444;text-align:right;white-space:nowrap;">2019 – 2021</td>
         </tr>
       </table>
-      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;
-                  color:#555;margin-bottom:2px;">Breadfast</div>
-      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;padding-left:10px;">
-          &bull; Managed delivery teams and coordinated tasks through Odoo workflows; first ERP exposure.
-      </div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;color:#555;margin-bottom:2px;">Breadfast</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;padding-left:10px;">&bull; Managed delivery teams and coordinated tasks through Odoo workflows; first ERP exposure.</div>
     </td>
   </tr>
 </table>
@@ -269,128 +219,59 @@
     Skills
 </div>
 
-<!-- 2-column skills, each: name/% row + full-width bar -->
 <table width="100%" cellpadding="0" cellspacing="0">
   <tr>
     <td width="49%" valign="top" style="padding-right:10px;">
-
-      <!-- Skill: Python/Odoo -->
       <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:4px;">
         <tr>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">
-              Python / Odoo
-          </td>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
-                     color:#444;text-align:right;">95%</td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">Python / Odoo</td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;color:#444;text-align:right;">95%</td>
         </tr>
-        <tr>
-          <td colspan="2" style="padding-top:2px;">
-            <div style="height:5px;background:#ddd;border-radius:3px;">
-              <div style="width:95%;height:5px;background:#222;border-radius:3px;"></div>
-            </div>
-          </td>
-        </tr>
+        <tr><td colspan="2" style="padding-top:2px;"><div style="height:5px;background:#ddd;border-radius:3px;"><div style="width:95%;height:5px;background:#222;border-radius:3px;"></div></div></td></tr>
       </table>
-
-      <!-- Skill: HTML/CSS -->
       <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:4px;">
         <tr>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">
-              HTML / CSS
-          </td>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
-                     color:#444;text-align:right;">90%</td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">HTML / CSS</td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;color:#444;text-align:right;">90%</td>
         </tr>
-        <tr>
-          <td colspan="2" style="padding-top:2px;">
-            <div style="height:5px;background:#ddd;border-radius:3px;">
-              <div style="width:90%;height:5px;background:#222;border-radius:3px;"></div>
-            </div>
-          </td>
-        </tr>
+        <tr><td colspan="2" style="padding-top:2px;"><div style="height:5px;background:#ddd;border-radius:3px;"><div style="width:90%;height:5px;background:#222;border-radius:3px;"></div></div></td></tr>
       </table>
-
-      <!-- Skill: PostgreSQL -->
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">
-              PostgreSQL
-          </td>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
-                     color:#444;text-align:right;">90%</td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">PostgreSQL</td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;color:#444;text-align:right;">90%</td>
         </tr>
-        <tr>
-          <td colspan="2" style="padding-top:2px;">
-            <div style="height:5px;background:#ddd;border-radius:3px;">
-              <div style="width:90%;height:5px;background:#222;border-radius:3px;"></div>
-            </div>
-          </td>
-        </tr>
+        <tr><td colspan="2" style="padding-top:2px;"><div style="height:5px;background:#ddd;border-radius:3px;"><div style="width:90%;height:5px;background:#222;border-radius:3px;"></div></div></td></tr>
       </table>
-
     </td>
     <td width="2%"></td>
     <td width="49%" valign="top">
-
-      <!-- Skill: XML/REST API -->
       <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:4px;">
         <tr>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">
-              XML / REST API
-          </td>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
-                     color:#444;text-align:right;">85%</td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">XML / REST API</td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;color:#444;text-align:right;">85%</td>
         </tr>
-        <tr>
-          <td colspan="2" style="padding-top:2px;">
-            <div style="height:5px;background:#ddd;border-radius:3px;">
-              <div style="width:85%;height:5px;background:#222;border-radius:3px;"></div>
-            </div>
-          </td>
-        </tr>
+        <tr><td colspan="2" style="padding-top:2px;"><div style="height:5px;background:#ddd;border-radius:3px;"><div style="width:85%;height:5px;background:#222;border-radius:3px;"></div></div></td></tr>
       </table>
-
-      <!-- Skill: JavaScript -->
       <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:4px;">
         <tr>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">
-              JavaScript / OWL
-          </td>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
-                     color:#444;text-align:right;">75%</td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">JavaScript / OWL</td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;color:#444;text-align:right;">75%</td>
         </tr>
-        <tr>
-          <td colspan="2" style="padding-top:2px;">
-            <div style="height:5px;background:#ddd;border-radius:3px;">
-              <div style="width:75%;height:5px;background:#222;border-radius:3px;"></div>
-            </div>
-          </td>
-        </tr>
+        <tr><td colspan="2" style="padding-top:2px;"><div style="height:5px;background:#ddd;border-radius:3px;"><div style="width:75%;height:5px;background:#222;border-radius:3px;"></div></div></td></tr>
       </table>
-
-      <!-- Skill: ERP Analysis -->
       <table width="100%" cellpadding="0" cellspacing="0">
         <tr>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">
-              ERP Analysis
-          </td>
-          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;
-                     color:#444;text-align:right;">88%</td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#111;">ERP Analysis</td>
+          <td style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:600;color:#444;text-align:right;">88%</td>
         </tr>
-        <tr>
-          <td colspan="2" style="padding-top:2px;">
-            <div style="height:5px;background:#ddd;border-radius:3px;">
-              <div style="width:88%;height:5px;background:#222;border-radius:3px;"></div>
-            </div>
-          </td>
-        </tr>
+        <tr><td colspan="2" style="padding-top:2px;"><div style="height:5px;background:#ddd;border-radius:3px;"><div style="width:88%;height:5px;background:#222;border-radius:3px;"></div></div></td></tr>
       </table>
-
     </td>
   </tr>
 </table>
 
-<!-- Languages – one row -->
+<!-- Languages -->
 <div style="font-family:'Segoe UI',Arial,sans-serif; font-size:11px; font-weight:600;
             color:#333; margin-top:5px; padding-top:4px; border-top:1px solid #ddd;">
     &#127760;&nbsp;
@@ -409,16 +290,15 @@
     Odoo Apps Published
 </div>
 
-<div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;
-            padding-left:10px; margin-bottom:2px;">
+<div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;padding-left:10px;margin-bottom:2px;">
     &bull; <strong><a href="https://apps.odoo.com/apps/modules/19.0/dynamic_state_approval"
        target="_blank" style="color:#014f7a;text-decoration:none;">Dynamic State Approval</a></strong>
-    – Dynamic workflow engine for multi-step state approvals in Odoo 18 & 19.
+    – Dynamic workflow engine for multi-step state approvals in Odoo 18 &amp; 19.
 </div>
 <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;color:#222;padding-left:10px;">
     &bull; <strong><a href="https://apps.odoo.com/apps/modules/19.0/notification_manager"
        target="_blank" style="color:#014f7a;text-decoration:none;">Notification Manager</a></strong>
-    – Advanced notification management system for automated alerts in Odoo 18 & 19.
+    – Advanced notification management system for automated alerts in Odoo 18 &amp; 19.
 </div>
 
 
@@ -434,27 +314,20 @@
 <table width="100%" cellpadding="0" cellspacing="0">
   <tr>
     <td width="34%" valign="top" style="padding-right:8px;">
-      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#000;">
-          Front-End Development</div>
-      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;color:#555;">
-          Route Academy – 2025</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#000;">Front-End Development</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;color:#555;">Route Academy – 2025</div>
     </td>
     <td width="34%" valign="top" style="padding-right:8px;">
-      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#000;">
-          JavaScript Course</div>
-      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;color:#555;">
-          Udemy (Jonas Schmedtmann) – 2025</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#000;">JavaScript Course</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;color:#555;">Udemy (Jonas Schmedtmann) – 2025</div>
     </td>
     <td width="32%" valign="top">
-      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#000;">
-          B.A. in Geography</div>
-      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;color:#555;">
-          Ain Shams University – 2016</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:11px;font-weight:700;color:#000;">B.A. in Geography</div>
+      <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:10.5px;font-style:italic;color:#555;">Ain Shams University – 2016</div>
     </td>
   </tr>
 </table>
 
 
-</div>
 </body>
 </html>

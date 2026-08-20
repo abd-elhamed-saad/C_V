@@ -883,8 +883,25 @@
                         while (pdf.internal.getNumberOfPages() > 1) {
                             pdf.deletePage(pdf.internal.getNumberOfPages());
                         }
-                    }).save().then(function () {
+                    }).outputPdf('blob').then(function (blob) {
+                        // Saving from inside the iframe (html2pdf's default
+                        // .save()) races the iframe.remove() below: Chrome can
+                        // cancel the blob download when the frame that created
+                        // it gets destroyed mid-flight. Triggering the download
+                        // from the parent document, which outlives the iframe,
+                        // avoids that.
                         iframe.remove();
+
+                        var url = URL.createObjectURL(blob);
+                        var link = document.createElement('a');
+                        link.href = url;
+                        link.download = 'Abd_Elhamed_Saad_CV.pdf';
+                        document.body.appendChild(link);
+                        link.click();
+                        link.remove();
+                        setTimeout(function () {
+                            URL.revokeObjectURL(url);
+                        }, 30000);
                     }).catch(fallback);
                 };
                 script.onerror = fallback;

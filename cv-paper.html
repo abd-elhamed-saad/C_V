@@ -20,11 +20,18 @@
             color: #111;
             background: #fff;
             width: 210mm;
-            height: 297mm;
             margin: 14px auto;
+            box-shadow: 0 3px 20px rgba(0,0,0,.5);
+        }
+
+        /* This is the box html2pdf actually captures (see index.html), so
+           the page's physical size and margins live here, not on body. */
+        #cv-content {
+            width: 210mm;
+            height: 297mm;
             padding: 9mm 13mm 6mm;
             overflow: hidden;
-            box-shadow: 0 3px 20px rgba(0,0,0,.5);
+            background: #fff;
         }
 
         @media print {
@@ -32,6 +39,9 @@
             body {
                 margin: 0 !important;
                 box-shadow: none !important;
+                width: 210mm !important;
+            }
+            #cv-content {
                 width: 210mm !important;
                 height: 297mm !important;
             }

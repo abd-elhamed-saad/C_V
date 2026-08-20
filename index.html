@@ -859,9 +859,13 @@
             iframe.onload = function () {
                 var idoc = iframe.contentDocument;
                 var iwin = iframe.contentWindow;
-                var body = idoc && idoc.body;
+                // Scoped to #cv-content (not body/html) so that anything a
+                // browser extension injects into the page (translate
+                // widgets, PDF helper overlays, etc.) never ends up in the
+                // capture - only our own markup lives inside this wrapper.
+                var content = idoc && idoc.getElementById('cv-content');
 
-                if (!body || !body.innerHTML) {
+                if (!content || !content.innerHTML) {
                     fallback();
                     return;
                 }
@@ -875,7 +879,7 @@
                         html2canvas: { scale: 3, useCORS: true, backgroundColor: '#ffffff', letterRendering: true },
                         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
                         pagebreak: { mode: 'avoid-all' }
-                    }).from(body);
+                    }).from(content);
 
                     worker.toPdf().get('pdf').then(function (pdf) {
                         // A4 height in px rounds up a hair over 297mm, which

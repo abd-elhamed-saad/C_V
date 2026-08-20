@@ -760,10 +760,32 @@
                                     <h2 class="news-title">
                                         SBS - Superior Business Solutions
                                     </h2>
-                                    <small class="employment-period">2025 - Present</small>
+                                    <small class="employment-period">2025 - 12/2025</small>
                                     <span>Odoo Developer</span>
                                     <p>Implemented custom solutions for ERP projects, focusing on customization and
                                         business process optimization.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="date-title">
+                            <span>2026</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 news-item">
+                                <div class="news-content">
+                                    <div class="date">
+                                        <img src="img/company/novanexus.jpg"
+                                            alt="NovaNexus Logo" class="news-company-logo"
+                                            onerror="this.onerror=null; this.src='img/company/building-company.png';">
+                                    </div>
+                                    <h2 class="news-title">
+                                        NovaNexus
+                                    </h2>
+                                    <small class="employment-period">01/2026 - Present</small>
+                                    <span>Senior Odoo Developer</span>
+                                    <p>Leading Odoo development and ERP customization across multiple client
+                                        implementations.</p>
                                 </div>
                             </div>
                         </div>
@@ -807,83 +829,72 @@
     <script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/wow.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="js/html2pdf.bundle.min.js"></script>
     <script>
         function downloadCvFromTemplate(event) {
             event.preventDefault();
-
-            var htmlUrl = 'cv-paper.html?ts=' + Date.now();
-            var cssUrl = 'css/cv-paper.css?ts=' + Date.now();
 
             if (typeof html2pdf === 'undefined') {
                 window.open('cv-paper.html', '_blank');
                 return false;
             }
 
-            Promise.all([
-                fetch(htmlUrl, { cache: 'no-store' }).then(function (r) {
-                    if (!r.ok) {
-                        throw new Error('Could not load template');
-                    }
-                    return r.text();
-                }),
-                fetch(cssUrl, { cache: 'no-store' }).then(function (r) {
-                    if (!r.ok) {
-                        throw new Error('Could not load template styles');
-                    }
-                    return r.text();
-                })
-            ]).then(function (files) {
-                var html = files[0];
-                var css = files[1];
-                var parser = new DOMParser();
-                var doc = parser.parseFromString(html, 'text/html');
-                var page = doc.querySelector('.page');
+            var iframe = document.createElement('iframe');
+            iframe.style.position = 'fixed';
+            iframe.style.left = '-100000px';
+            iframe.style.top = '0';
+            iframe.style.width = '210mm';
+            iframe.style.height = '297mm';
+            iframe.style.border = '0';
 
-                if (!page) {
-                    throw new Error('Template content not found');
-                }
-
-                var host = document.createElement('div');
-                host.style.position = 'fixed';
-                host.style.left = '-100000px';
-                host.style.top = '0';
-                host.style.width = '210mm';
-                host.innerHTML = '<style>' + css + '</style>' + page.outerHTML;
-                document.body.appendChild(host);
-
-                var pageNode = host.querySelector('.page');
-                var mmToPx = 96 / 25.4;
-                var targetWidth = 210 * mmToPx;
-                var targetHeight = 297 * mmToPx;
-
-                pageNode.style.width = '210mm';
-                pageNode.style.height = '297mm';
-                pageNode.style.overflow = 'hidden';
-
-                var scale = Math.min(targetWidth / pageNode.scrollWidth, targetHeight / pageNode.scrollHeight, 1);
-                if (scale < 1) {
-                    pageNode.style.transform = 'scale(' + scale + ')';
-                    pageNode.style.transformOrigin = 'top left';
-                    host.style.width = (210 / scale) + 'mm';
-                }
-
-                return html2pdf().set({
-                    margin: 0,
-                    filename: 'Abd_Elhamed_Saad_CV.pdf',
-                    image: { type: 'jpeg', quality: 1 },
-                    html2canvas: { scale: 3, useCORS: true, backgroundColor: '#ffffff', letterRendering: true },
-                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-                }).from(pageNode).save().then(function () {
-                    host.remove();
-                }).catch(function (err) {
-                    host.remove();
-                    throw err;
-                });
-            }).catch(function () {
+            var fallback = function () {
+                iframe.remove();
                 window.open('cv-paper.html', '_blank');
-            });
+            };
+
+            // Rendering has to happen inside the iframe's own window: running
+            // html2canvas from the parent window against a node that lives in
+            // a different document mis-measures its layout and produces a
+            // cropped/blank capture.
+            iframe.onload = function () {
+                var idoc = iframe.contentDocument;
+                var iwin = iframe.contentWindow;
+                var body = idoc && idoc.body;
+
+                if (!body || !body.innerHTML) {
+                    fallback();
+                    return;
+                }
+
+                var script = idoc.createElement('script');
+                script.onload = function () {
+                    var worker = iwin.html2pdf().set({
+                        margin: 0,
+                        filename: 'Abd_Elhamed_Saad_CV.pdf',
+                        image: { type: 'jpeg', quality: 1 },
+                        html2canvas: { scale: 3, useCORS: true, backgroundColor: '#ffffff', letterRendering: true },
+                        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                        pagebreak: { mode: 'avoid-all' }
+                    }).from(body);
+
+                    worker.toPdf().get('pdf').then(function (pdf) {
+                        // A4 height in px rounds up a hair over 297mm, which
+                        // tricks html2pdf into adding a trailing blank page.
+                        while (pdf.internal.getNumberOfPages() > 1) {
+                            pdf.deletePage(pdf.internal.getNumberOfPages());
+                        }
+                    }).save().then(function () {
+                        iframe.remove();
+                    }).catch(fallback);
+                };
+                script.onerror = fallback;
+                script.src = 'js/html2pdf.bundle.min.js';
+                idoc.head.appendChild(script);
+            };
+            iframe.onerror = fallback;
+
+            iframe.src = 'cv-paper.html?ts=' + Date.now();
+            document.body.appendChild(iframe);
 
             return false;
         }

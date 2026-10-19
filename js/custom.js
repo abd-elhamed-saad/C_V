@@ -83,14 +83,10 @@ $(document).ready(function() {
             columnNumb = 1;
 
 
-        // Desktop: 4 cards per row (8 projects show as 2 rows).
-        if (winWidth > 1199) {
-            columnNumb = 4;
-        } else if (winWidth > 991) {
-            columnNumb = 4;
-        } else if (winWidth > 768) {
+        // Desktop: 3 cards per row, tablet: 2, phone: 1.
+        if (winWidth > 991) {
             columnNumb = 3;
-        } else if (winWidth > 479) {
+        } else if (winWidth > 640) {
             columnNumb = 2;
         } else {
             columnNumb = 1;
@@ -111,19 +107,34 @@ $(document).ready(function() {
         });
     }
 
+    // Give every card in the same row the same height, so rows line up.
+    function equalizeRows() {
+        var columnNumb = splitColumns(),
+            boxes = container.find('.portfolio-item:not(.isotope-hidden) .box');
+
+        boxes.css('min-height', '');
+        for (var i = 0; i < boxes.length; i += columnNumb) {
+            var row = boxes.slice(i, i + columnNumb),
+                tallest = 0;
+            row.each(function() {
+                tallest = Math.max(tallest, $(this).outerHeight());
+            });
+            row.css('min-height', tallest + 'px');
+        }
+    }
+
     function setProjects() {
         setColumns();
+        equalizeRows();
         container.isotope('reLayout');
     }
 
     if ($.fn.imagesLoaded) {
         container.imagesLoaded(function() {
-            setColumns();
-            container.isotope('reLayout');
+            setProjects();
         });
     } else {
-        setColumns();
-        container.isotope('reLayout');
+        setProjects();
     }
 
 

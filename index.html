@@ -12,6 +12,14 @@
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="css/fa6-all.min.css" rel="stylesheet" type="text/css">
     <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <!-- Fonts: Manrope (text), Source Serif 4 (name), Sacramento (handwriting) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sacramento&family=Source+Serif+4:wght@600;700&display=swap"
+        rel="stylesheet">
+    <!-- Dark + Odoo purple theme. Must stay last so it overrides style.css -->
+    <link href="css/odoo-dark-theme.css" rel="stylesheet" type="text/css">
 
     <!--[if lt IE 9]>
     <script src="js/respond-1.1.0.min.js"></script>
@@ -22,46 +30,156 @@
 </head>
 
 <body>
+    <!-- =================================================================
+         SECTION: HERO
+         Left  = intro text, typed role, buttons, contact links.
+         Right = photo with floating badges.
+         Bottom = STATS (animated numbers).
+         ================================================================= -->
     <header id="header">
-        <div id="head" class="parallax" parallax-speed="2" style="background-position: 50% 0px;">
+        <div id="head">
+            <div class="container">
+                <div class="hero_grid">
 
-            <div class="top_left_cont zoomIn wow animated" id="logo">
-                <img class="img-circle hero-profile-img" src="img/abdelhamed.jpeg" alt="Abd Elhamed Saad">
+                    <!-- HERO LEFT: intro text -->
+                    <div class="hero_text">
+                        <div class="hero_chips">
+                            <span class="hero_chip"><i class="fa-solid fa-star"></i> Odoo ERP Solutions</span>
+                            <span class="hero_chip hero_chip_muted">Odoo 15 &ndash; 19</span>
+                        </div>
 
-                <h2>Hello! I am Abd Elhamed Saad <br /><strong>Odoo Developer specializing in ERP solutions</strong>
-                </h2>
-                <div class="hero_actions">
-                    <a href="#Portfolio" class="read_more2">View Projects</a>
-                    <a href="cv-paper.html" class="read_more" onclick="return downloadCvFromTemplate(event)">Download CV
-                        PDF</a>
+                        <a href="https://wa.me/201050039300" target="_blank" class="hero_cta_pill">
+                            <span class="badge_dot"></span>
+                            <span>Have a project?</span>
+                            <strong>Let's talk on WhatsApp</strong>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <p class="hero_hi">Hi, I'm</p>
+                        <h1 class="hero_name">Abd Elhamed <span>Saad</span></h1>
+
+                        <!-- Typed role: edit the list in data-roles (separate with |) -->
+                        <p class="hero_role">
+                            <span class="hero_typed"
+                                data-roles="Senior Odoo Developer|ERP Customization Expert|Odoo Integration &amp; Migration">Senior
+                                Odoo Developer</span><span class="hero_caret">|</span>
+                        </p>
+
+                        <p class="hero_desc">
+                            Senior Odoo Developer with 5+ years of experience building ERP solutions for HR, Payroll,
+                            Sales, Inventory, POS and Accounting. I design custom modules and workflows that
+                            <strong>keep working after go-live</strong>.
+                        </p>
+
+                        <div class="hero_actions">
+                            <!-- Turns cv-paper.html into a one-page PDF and downloads it (see the script at the end) -->
+                            <a href="cv-paper.html" class="read_more" onclick="return downloadCvFromTemplate(event)">
+                                Download CV <i class="fa-solid fa-arrow-down"></i></a>
+                            <a href="#Portfolio" class="read_more2 scroll-link">View Projects <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+
+                        <!-- HERO CONTACT LINKS -->
+                        <div class="hero_contact_row">
+                            <div class="hero_social_links">
+                                <a href="https://www.linkedin.com/in/abd-el-hamed-saad/" target="_blank"
+                                    class="hero_social_link" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://github.com/abd-elhamed-saad" target="_blank" class="hero_social_link"
+                                    title="GitHub"><i class="fa-brands fa-github"></i></a>
+                                <a href="mailto:abdel7med.saad@gmail.com" class="hero_social_link" title="Email"><i
+                                        class="fa-regular fa-envelope"></i></a>
+                                <a href="https://wa.me/201050039300" target="_blank" class="hero_social_link"
+                                    title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="https://www.facebook.com/Abd.Elh7med.Saad" target="_blank"
+                                    class="hero_social_link" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            </div>
+                            <div class="hero_availability">
+                                <strong><span class="badge_dot"></span> Open to new projects</strong>
+                                <span>Al-Khanka, Egypt &middot; Remote friendly</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HERO RIGHT: photo + floating badges -->
+                    <div class="hero_visual">
+                        <p class="hero_handwriting">Turning workflows<br>into real Odoo modules</p>
+                        <svg class="hero_handwriting_arrow" viewBox="0 0 160 40" aria-hidden="true">
+                            <path d="M4 34 C 50 24, 100 16, 150 10" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" />
+                            <path d="M138 4 L152 10 L140 18" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <div class="hero_ring"></div>
+                        <div class="hero_photo">
+                            <img src="img/abdelhamed.jpeg" alt="Abd Elhamed Saad">
+                        </div>
+
+                        <div class="hero_float hero_float_1">
+                            <span class="hero_float_icon"><img src="img/odoo-logo.svg" alt="Odoo"></span>
+                            <span><small>Senior Odoo</small><strong>Developer</strong></span>
+                        </div>
+                        <div class="hero_float hero_float_2">
+                            <span class="hero_float_icon"><img src="img/company/novanexus.jpg" alt="NovaNexus"></span>
+                            <span><small>Currently at</small><strong>NovaNexus</strong></span>
+                        </div>
+                        <div class="hero_float hero_float_3">
+                            <span class="hero_float_icon hero_float_icon_text"><i class="fa-solid fa-layer-group"></i></span>
+                            <span><small>Odoo Versions</small><strong>v15 &ndash; v19</strong></span>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero_social_links">
-                    <a href="https://www.linkedin.com/in/abd-el-hamed-saad/" target="_blank" class="hero_social_link"
-                        title="LinkedIn">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/abd-elhamed-saad" target="_blank" class="hero_social_link"
-                        title="GitHub">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://www.facebook.com/Abd.Elh7med.Saad" target="_blank" class="hero_social_link"
-                        title="Facebook">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://wa.me/01050039300" target="_blank" class="hero_social_link" title="WhatsApp">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
+
+                <!-- HERO BOTTOM / STATS: animated numbers.
+                     To change a number edit data-target; the "+" is in stat_suffix. -->
+                <div id="stats" class="stats_grid">
+                    <div class="stat_card">
+                        <span class="stat_icon"><i class="fa-solid fa-cube"></i></span>
+                        <span class="stat_text">
+                            <span class="stat_number"><span class="stat_count" data-target="45">45</span><span
+                                    class="stat_suffix">+</span></span>
+                            <span class="stat_label">Projects Delivered</span>
+                        </span>
+                    </div>
+                    <div class="stat_card">
+                        <span class="stat_icon"><i class="fa-solid fa-users"></i></span>
+                        <span class="stat_text">
+                            <span class="stat_number"><span class="stat_count" data-target="23">23</span><span
+                                    class="stat_suffix">+</span></span>
+                            <span class="stat_label">Happy Clients</span>
+                        </span>
+                    </div>
+                    <div class="stat_card">
+                        <span class="stat_icon"><i class="fa-solid fa-puzzle-piece"></i></span>
+                        <span class="stat_text">
+                            <span class="stat_number"><span class="stat_count" data-target="80">80</span><span
+                                    class="stat_suffix">+</span></span>
+                            <span class="stat_label">Custom Modules</span>
+                        </span>
+                    </div>
+                    <div class="stat_card">
+                        <span class="stat_icon"><i class="fa-solid fa-bolt"></i></span>
+                        <span class="stat_text">
+                            <span class="stat_number"><span class="stat_count" data-target="5">5</span><span
+                                    class="stat_suffix">+</span></span>
+                            <span class="stat_label">Years Experience</span>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
-
     </header>
+    <!-- END SECTION: HERO -->
 
-    <!--Header_section-->
+    <!-- =================================================================
+         SECTION: NAVBAR (sticky menu + Odoo logo on the left)
+         ================================================================= -->
     <header id="header_wrapper">
         <div class="container">
             <div class="header_box">
-                <!--<div class="logo"><a href="#">Resume</a></div>-->
+                <a href="#header" class="nav_brand scroll-link" title="Odoo Developer">
+                    <img src="img/odoo-logo.svg" alt="Odoo">
+                </a>
                 <nav class="navbar navbar-inverse" role="navigation">
                     <div class="navbar-header">
                         <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse"
@@ -74,8 +192,9 @@
                             <li class="active"><a href="#header" class="scroll-link">Home</a></li>
                             <li><a href="#aboutUs" class="scroll-link">About Me</a></li>
                             <li><a href="#service" class="scroll-link">Services</a></li>
-                            <li><a href="#Portfolio" class="scroll-link">Portfolio</a></li>
+                            <li><a href="#techSkills" class="scroll-link">Skills</a></li>
                             <li><a href="#experience" class="scroll-link">Experience</a></li>
+                            <li><a href="#Portfolio" class="scroll-link">Portfolio</a></li>
                             <li><a href="#contact" class="scroll-link">Contact</a></li>
                         </ul>
                     </div>
@@ -83,9 +202,13 @@
             </div>
         </div>
     </header>
-    <!--Header_section-->
+    <!-- END SECTION: NAVBAR -->
 
-    <section id="aboutUs"><!--Aboutus-->
+
+    <!-- =================================================================
+         SECTION: ABOUT ME (education + profile)
+         ================================================================= -->
+    <section id="aboutUs">
         <div class="inner_wrapper about-us aboutUs-container fadeInLeft animated wow">
             <div class="container">
                 <h2>About Me</h2>
@@ -110,7 +233,7 @@
                         </div>
                         <div class="col-md-6">
                             <h3>Profile</h3>
-                            <p>Odoo Developer with 3+ years experience in ERP systems (HR, Payroll, Sales, Inventory).
+                            <p>Odoo Developer with 5+ years experience in ERP systems (HR, Payroll, Sales, Inventory).
                                 Strong expertise in Python, PostgreSQL, XML, JavaScript and business automation.
                                 Passionate
                                 about creating efficient solutions that drive business growth.</p>
@@ -134,66 +257,12 @@
             </div>
         </div>
     </section>
-    <!--Aboutus-->
-<!-- Certifications Section -->
-<section id="certifications">
-  <div class="container">
-
-    <h2 class="section-title">CERTIFICATIONS</h2>
-
-    <div class="certifications-grid">
-      <!-- Certificate Item -->
-      <div class="certificate-card">
-        <h3>Frontend Development Certificate</h3>
-
-        <div class="certificate-preview">
-
-          <img src="img/company/frontend-certificate-preview.jpg"
-            alt="Frontend Certificate"  />
-
-          
-        </div>
-
-      </div>
+    <!-- END SECTION: ABOUT ME -->
 
 
-      <!-- Example second certificate -->
-      <!--
-      <div class="certificate-card">
-
-        <h3>JavaScript Certificate</h3>
-
-        <div class="certificate-preview">
-
-          <img 
-            src="img/company/js-certificate.jpg"
-            alt="JS Certificate"
-          >
-
-          <div class="certificate-overlay">
-
-            <a 
-              href="img/company/js-certificate.pdf"
-              target="_blank"
-              class="open-btn"
-            >
-              Open
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-      -->
-
-
-    </div>
-
-  </div>
-</section>
-
-    <!--Service-->
+    <!-- =================================================================
+         SECTION: SERVICES (what I deliver)
+         ================================================================= -->
     <section id="service">
         <div class="container">
             <h2>Core Services</h2>
@@ -245,402 +314,104 @@
             </div>
         </div>
     </section>
-    <!--Service-->
+    <!-- END SECTION: SERVICES -->
+
+    <!-- =================================================================
+         SECTION: TECHNICAL SKILLS + CERTIFICATIONS
+         Left  = interactive 3D tech sphere (drag to spin).
+                 Add / remove a <div class="sphere_item"> to change it;
+                 js/sections.js places the items on the sphere automatically.
+         Right = certificate card (click to open full size).
+         Bottom = moving row of Odoo business apps.
+         ================================================================= -->
     <section id="techSkills">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-6">
-                    <h2>Technical Skills</h2>
-                    <p>
-                        Highly motivated Odoo Developer with 3+ years of experience customizing and developing modules
-                        across versions 15–18.
-                        Proficient in Python, PostgreSQL, XML, JavaScript, and business automation.
-                    </p>
-                    <p>
-                        Focused on building scalable ERP solutions for HR, Payroll, Sales, Inventory, and Portal
-                        systems.
-                    </p>
-                </div>
-                <div class="col-sm-6 col-md-6">
-
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                            aria-valuemax="100" style="width: 100%;">
-                            <span class="sr-only">100% Complete</span>
-                        </div>
-                        <span class="progress-type">Python &amp; Odoo</span>
-                        <span class="progress-completed">100%</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90"
-                            aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-                            <span class="sr-only">90% Complete</span>
-                        </div>
-                        <span class="progress-type">PostgreSQL</span>
-                        <span class="progress-completed">90%</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100"
-                            aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                            <span class="sr-only">100% Complete</span>
-                        </div>
-                        <span class="progress-type">HTML</span>
-                        <span class="progress-completed">100%</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="100"
-                            aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                            <span class="sr-only">100% Complete</span>
-                        </div>
-                        <span class="progress-type">CSS</span>
-                        <span class="progress-completed">100%</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
-                            aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                            <span class="sr-only">80% Complete</span>
-                        </div>
-                        <span class="progress-type">JavaScript</span>
-                        <span class="progress-completed">80%</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-                            aria-valuemax="100" style="width: 70%;">
-                            <span class="sr-only">70% Complete</span>
-                        </div>
-                        <span class="progress-type">REST API &amp; XML</span>
-                        <span class="progress-completed">70%</span>
-                    </div>
-                </div>
-            </div>
-            <div>
-    </section>
-
-    <!-- Portfolio -->
-    <section id="Portfolio" class="content">
-        <div class="container portfolio_title">
-            <div class="section-header">
-                <h2>Projects &amp; Expertise</h2>
-                <h5><em>Selected Odoo solutions and real-world implementations</em></h5>
-                <div class="fancy"><span></span></div>
+            <div class="section-heading">
+                <h2>Technical Skills</h2>
+                <h6>Technologies, Odoo apps and certifications</h6>
             </div>
 
-            <div id="filters" class="sixteen columns text-center">
-                <ul class="list-inline cat clearfix">
-                    <li><a id="all" href="#" data-filter="*" class="active">All</a></li>
-                    <li><a href="#" data-filter=".nature">Customization</a></li>
-                    <li><a href="#" data-filter=".wildlife">Workflows</a></li>
-                    <li><a href="#" data-filter=".citylife">POS</a></li>
-                    <li><a href="#" data-filter=".animals">Portal Experience</a></li>
-                    <li><a href="#" data-filter=".account">Account</a></li>
-                </ul>
+            <div class="row skills_layout">
+
+                <!-- SKILLS LEFT: 3D tech sphere -->
+                <div class="col-md-6">
+                    <div class="sphere_block">
+                        <p class="sphere_caption">Interactive Tech Sphere</p>
+                        <p class="sphere_hint">drag &amp; spin to explore</p>
+
+                        <div class="tech_sphere" id="techSphere">
+                            <div class="sphere_item" data-label="Odoo 15 - 19"><img src="img/odoo-logo.svg" alt="Odoo" class="wide"></div>
+                            <div class="sphere_item" data-label="Python"><img src="img/skills/python-original.svg" alt="Python"></div>
+                            <div class="sphere_item" data-label="PostgreSQL"><img src="img/skills/postgresql-original.svg" alt="PostgreSQL"></div>
+                            <div class="sphere_item" data-label="JavaScript"><img src="img/skills/javascript-original.svg" alt="JavaScript"></div>
+                            <div class="sphere_item" data-label="XML"><img src="img/skills/xml-original.svg" alt="XML"></div>
+                            <div class="sphere_item" data-label="HTML5"><img src="img/skills/html5-original.svg" alt="HTML5"></div>
+                            <div class="sphere_item" data-label="CSS3"><img src="img/skills/css3-original.svg" alt="CSS3"></div>
+                            <div class="sphere_item text_item" data-label="Odoo Web Library">OWL</div>
+                            <div class="sphere_item text_item" data-label="QWeb Reports">QWeb</div>
+                            <div class="sphere_item" data-label="REST API / JSON"><img src="img/skills/json-original.svg" alt="REST API"></div>
+                            <div class="sphere_item" data-label="Git"><img src="img/skills/git-original.svg" alt="Git"></div>
+                            <div class="sphere_item" data-label="GitHub"><img src="img/skills/github-original.svg" alt="GitHub" class="invert"></div>
+                            <div class="sphere_item" data-label="Linux"><img src="img/skills/linux-original.svg" alt="Linux"></div>
+                            <div class="sphere_item" data-label="Ubuntu"><img src="img/skills/ubuntu-original.svg" alt="Ubuntu"></div>
+                            <div class="sphere_item" data-label="Bootstrap"><img src="img/skills/bootstrap-original.svg" alt="Bootstrap"></div>
+                            <div class="sphere_item" data-label="jQuery"><img src="img/skills/jquery-original.svg" alt="jQuery"></div>
+                            <div class="sphere_item" data-label="PyCharm"><img src="img/skills/pycharm-original.svg" alt="PyCharm"></div>
+                            <div class="sphere_item" data-label="VS Code"><img src="img/skills/vscode-original.svg" alt="VS Code"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SKILLS RIGHT: certifications -->
+                <div class="col-md-6">
+                    <div id="certifications" class="certificate-card">
+                        <span class="certificate-label"><i class="fa-solid fa-award"></i> Certification</span>
+                        <h3>Frontend Development Certificate</h3>
+                        <p class="certificate-issuer">Route IT Training Center &middot; 2025</p>
+
+                        <a href="img/company/frontend-certificate-preview.jpg" class="fancybox certificate-preview"
+                            title="Frontend Development Certificate - Route IT Training Center">
+                            <img src="img/company/frontend-certificate-preview.jpg" alt="Frontend Certificate">
+                            <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> View
+                                full size</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="portfolio">
-            <div class="isotope fadeInLeft animated wow" id="portfolio_wrapper">
-                <div class="portfolio-item one-four animals isotope-item">
-                    <div class="box portfolio-card">
-                        <div class="hover-bg">
-                            <img src="img/project/ElSaman_smn_donations/10_2025-12-18_18-51.png" class="img-responsive"
-                                alt="Donations Portal Workflow">
-                            <div class="hover-text off">
-                                <a title="Donations Portal Workflow"
-                                    href="img/project/ElSaman_smn_donations/10_2025-12-18_18-51.png"
-                                    class="fancybox fancybox-main portfolio-view-link" rel="project-1"><i
-                                        class="fa fa-expand"></i> View details</a>
-                                <a href="img/project/ElSaman_smn_donations/11_2025-12-18_18-52.png"
-                                    class="fancybox fancybox-hidden" rel="project-1" style="display:none;"></a>
-                                <a href="img/project/ElSaman_smn_donations/17_2025-12-26_16-06.png"
-                                    class="fancybox fancybox-hidden" rel="project-1" style="display:none;"></a>
-                            </div>
-                        </div>
-                        <div class="portfolio-card-body">
-                            <h5>Donations Workflow</h5>
-                            <p class="portfolio-summary">Built a donation flow with Family and Individual donations.</p>
-                            <p class="portfolio-impact"><strong>Impact:</strong> Reduced manual follow-up and improved
-                                donor
-                                checkout speed and donation processing.</p>
-                            <p class="portfolio-stack">Odoo, Python, XML, HTML, CSS</p>
-                            <a title="Donations Portal Workflow"
-                                href="img/project/ElSaman_smn_donations/10_2025-12-18_18-51.png"
-                                class="fancybox fancybox-main portfolio-inline-link" rel="project-1">View details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item one-four nature isotope-item">
-                    <div class="box portfolio-card">
-                        <div class="hover-bg">
-                            <img src="img/project/Notification_Model/02_notification_config_form.png"
-                                class="img-responsive" alt="Rule-Based Notification Engine">
-                            <div class="hover-text off">
-                                <a title="Rule-Based Notification Engine"
-                                    href="img/project/Notification_Model/19_activity_notification_detail.png"
-                                    class="fancybox fancybox-main portfolio-view-link" rel="project-2"><i
-                                        class="fa fa-expand"></i> View details</a>
-                                <a href="img/project/Notification_Model/10_activity_type_selection.png"
-                                    class="fancybox fancybox-hidden" rel="project-2" style="display:none;"></a>
-                                <a href="img/project/Notification_Model/20_notification_logs.png"
-                                    class="fancybox fancybox-hidden" rel="project-2" style="display:none;"></a>
-                            </div>
-                        </div>
-                        <div class="portfolio-card-body">
-                            <h5>Rule-Based Notification Engine</h5>
-                            <p class="portfolio-summary">Designed configurable notification rules for activities, users,
-                                and
-                                followers.</p>
-                            <p class="portfolio-impact"><strong>Impact:</strong> Improved response time with targeted
-                                and
-                                automated alerts.</p>
-                            <p class="portfolio-stack">Odoo, Python, XML</p>
-                            <a title="Rule-Based Notification Engine"
-                                href="img/project/Notification_Model/02_notification_config_form.png"
-                                class="fancybox fancybox-main portfolio-inline-link" rel="project-2">View details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item one-four wildlife isotope-item">
-                    <div class="box portfolio-card">
-                        <div class="hover-bg">
-                            <img src="img/project/SBS_alqashami/38_2025-12-22_15-54_1.png" class="img-responsive"
-                                alt="Repair Order Workflow Enhancements">
-                            <div class="hover-text off">
-                                <a title="Repair Order Workflow Enhancements"
-                                    href="img/project/SBS_alqashami/38_2025-12-22_15-54_1.png"
-                                    class="fancybox fancybox-main portfolio-view-link" rel="project-3"><i
-                                        class="fa fa-expand"></i> View details</a>
-                                <a href="img/project/SBS_alqashami/46_task_004_01.png" class="fancybox fancybox-hidden"
-                                    rel="project-3" style="display:none;"></a>
-                                <a href="img/project/SBS_alqashami/53_task_004_08.png" class="fancybox fancybox-hidden"
-                                    rel="project-3" style="display:none;"></a>
-                            </div>
-                        </div>
-                        <div class="portfolio-card-body">
-                            <h5>Repair Order Workflow Enhancements</h5>
-                            <p class="portfolio-summary">Delivered project-specific enhancements for operations and
-                                workflow
-                                control.</p>
-                            <p class="portfolio-impact"><strong>Impact:</strong> A car transportation and maintenance
-                                project and its appointments because there are no appointments related to my work.</p>
-                            <p class="portfolio-stack">Odoo, Python, PostgreSQL , XML , HTML , CSS</p>
-                            <a title="Repair Order Workflow Enhancements"
-                                href="img/project/SBS_alqashami/38_2025-12-22_15-54_1.png"
-                                class="fancybox fancybox-main portfolio-inline-link" rel="project-3">View details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item one-four nature isotope-item">
-                    <div class="box portfolio-card">
-                        <div class="hover-bg">
-                            <img src="img/project/SBS_Babic/22_action.png" class="img-responsive"
-                                alt="Barcode and Sequence Automation">
-                            <div class="hover-text off">
-                                <a title="Barcode and Sequence Automation" href="img/project/SBS_Babic/22_action.png"
-                                    class="fancybox fancybox-main portfolio-view-link" rel="project-4"><i
-                                        class="fa fa-expand"></i> View details</a>
-                                <a href="img/project/SBS_Babic/23_copy_to_barcode.png" class="fancybox fancybox-hidden"
-                                    rel="project-4" style="display:none;"></a>
-                                <a href="img/project/SBS_Babic/25_update_sequance.png" class="fancybox fancybox-hidden"
-                                    rel="project-4" style="display:none;"></a>
-                            </div>
-                        </div>
-                        <div class="portfolio-card-body">
-                            <h5>Barcode and Sequence Automation</h5>
-                            <p class="portfolio-summary">Implemented barcode and sequence actions to streamline stock
-                                operations.</p>
-                            <p class="portfolio-impact"><strong>Impact:</strong> Controlling the creation of barcodes
-                                facilitates ease and the possibility of modification .</p>
-                            <p class="portfolio-stack">Odoo, Python, XML , HTML , CSS</p>
-                            <a title="Barcode and Sequence Automation" href="img/project/SBS_Babic/22_action.png"
-                                class="fancybox fancybox-main portfolio-inline-link" rel="project-4">View details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item one-four wildlife isotope-item">
-                    <div class="box portfolio-card">
-                        <div class="hover-bg">
-                            <img src="img/project/Work_flow/Work_flow_01.png" class="img-responsive" alt="Work Flow">
-                            <div class="hover-text off">
-                                <a title="Work Flow" href="img/project/Work_flow/Work_flow_01.png"
-                                    class="fancybox fancybox-main portfolio-view-link" rel="project-5"><i
-                                        class="fa fa-expand"></i> View details</a>
-                                <a href="img/project/Work_flow/Work_flow_02.png" class="fancybox fancybox-hidden"
-                                    rel="project-5" style="display:none;"></a>
-                                <a href="img/project/Work_flow/Work_flow_03.png" class="fancybox fancybox-hidden"
-                                    rel="project-5" style="display:none;"></a>
-                                <a href="img/project/Work_flow/Work_flow_04.png" class="fancybox fancybox-hidden"
-                                    rel="project-5" style="display:none;"></a>
-                            </div>
-                        </div>
-                        <div class="portfolio-card-body">
-                            <h5>Work Flow</h5>
-                            <p class="portfolio-summary">Built multi-level approvals across Sales, Purchase, and
-                                Invoicing
-                                with controlled state transitions.</p>
-                            <p class="portfolio-impact"><strong>Impact:</strong> Better process governance, clearer
-                                approval
-                                ownership, and faster handoff between teams.</p>
-                            <p class="portfolio-stack">Odoo, Python, XML, JS</p>
-                            <a title="Work Flow" href="img/project/Work_flow/Work_flow_01.png"
-                                class="fancybox fancybox-main portfolio-inline-link" rel="project-5">View details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item one-four citylife isotope-item">
-                    <div class="box portfolio-card">
-                        <div class="hover-bg">
-                            <img src="img/project/POS/pos_01_whatsapp.jpeg" class="img-responsive"
-                                alt="POS Attendance and Overtime Flow">
-                            <div class="hover-text off">
-                                <a title="POS Attendance and Overtime Flow" href="img/project/POS/pos_01_whatsapp.jpeg"
-                                    class="fancybox fancybox-main portfolio-view-link" rel="project-6"><i
-                                        class="fa fa-expand"></i> View details</a>
-                                <a href="img/project/POS/pos_02.png" class="fancybox fancybox-hidden" rel="project-6"
-                                    style="display:none;"></a>
-                                <a href="img/project/POS/pos_03.png" class="fancybox fancybox-hidden" rel="project-6"
-                                    style="display:none;"></a>
-                                <a href="img/project/POS/pos_04_hr_01.png" class="fancybox fancybox-hidden"
-                                    rel="project-6" style="display:none;"></a>
-                                <a href="img/project/POS/pos_05_hr_02.png" class="fancybox fancybox-hidden"
-                                    rel="project-6" style="display:none;"></a>
-                                <a href="img/project/POS/pos_06_hr_03.png" class="fancybox fancybox-hidden"
-                                    rel="project-6" style="display:none;"></a>
-                            </div>
-                        </div>
-                        <div class="portfolio-card-body">
-                            <h5>POS Flow</h5>
-                            <p class="portfolio-summary">Customized POS workflow for clearer cashier and
-                                Customized POS operations.</p>
-                            <p class="portfolio-impact"><strong>Impact:</strong> Add access Right to the cashier and
-                                Customized POS operations.</p>
-                            <p class="portfolio-stack">Odoo POS, Python, XML</p>
-                            <a title="POS Attendance and Overtime Flow" href="img/project/POS/pos_01_whatsapp.jpeg"
-                                class="fancybox fancybox-main portfolio-inline-link" rel="project-6">View details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item one-four nature isotope-item">
-                    <div class="box portfolio-card">
-                        <div class="hover-bg">
-                            <img src="img/project/SBS_pyram/18_2025-11-30_09-25_1.png" class="img-responsive"
-                                alt="Product Rules and Controls">
-                            <div class="hover-text off">
-                                <a title="Product Rules and Controls"
-                                    href="img/project/SBS_pyram/18_2025-11-30_09-25_1.png"
-                                    class="fancybox fancybox-main portfolio-view-link" rel="project-7"><i
-                                        class="fa fa-expand"></i> View details</a>
-                                <a href="img/project/SBS_pyram/20_2025-11-30_09-26.png" class="fancybox fancybox-hidden"
-                                    rel="project-7" style="display:none;"></a>
-                                <a href="img/project/SBS_pyram/21_2025-11-30_10-40.png" class="fancybox fancybox-hidden"
-                                    rel="project-7" style="display:none;"></a>
-                            </div>
-                        </div>
-                        <div class="portfolio-card-body">
-                            <h5>Product Rules and Controls</h5>
-                            <p class="portfolio-summary">Built module updates for process controls and user action
-                                clarity.</p>
-                            <p class="portfolio-impact"><strong>Impact:</strong> Better data quality and smoother
-                                day-to-day
-                                operations.</p>
-                            <p class="portfolio-stack">Odoo, Python, XML</p>
-                            <a title="Product Rules and Controls" href="img/project/SBS_pyram/18_2025-11-30_09-25_1.png"
-                                class="fancybox fancybox-main portfolio-inline-link" rel="project-7">View details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item one-four wildlife isotope-item">
-                    <div class="box portfolio-card">
-                        <div class="hover-bg">
-                            <img src="img/project/SBS_sbs_debacker/sbs_debacker_01_barcode_settings.png"
-                                class="img-responsive" alt="Inventory Data Integrity Fixes">
-                            <div class="hover-text off">
-                                <a title="Inventory Data Integrity Fixes"
-                                    href="img/project/SBS_sbs_debacker/sbs_debacker_01_barcode_settings.png"
-                                    class="fancybox fancybox-main portfolio-view-link" rel="project-8"><i
-                                        class="fa fa-expand"></i> View details</a>
-                                <a href="img/project/SBS_sbs_debacker/sbs_debacker_02_inventory_menu_entries.png"
-                                    class="fancybox fancybox-hidden" rel="project-8" style="display:none;"></a>
-                                <a href="img/project/SBS_sbs_debacker/sbs_debacker_03_variant_barcode_result.png"
-                                    class="fancybox fancybox-hidden" rel="project-8" style="display:none;"></a>
-                                <a href="img/project/SBS_sbs_debacker/sbs_debacker_04_variant_limit_validation.png"
-                                    class="fancybox fancybox-hidden" rel="project-8" style="display:none;"></a>
-                                <a href="img/project/SBS_sbs_debacker/sbs_debacker_05_brand_short_code_rule.png"
-                                    class="fancybox fancybox-hidden" rel="project-8" style="display:none;"></a>
-                                <a href="img/project/SBS_sbs_debacker/sbs_debacker_06_pos_closing_session.png"
-                                    class="fancybox fancybox-hidden" rel="project-8" style="display:none;"></a>
-                            </div>
-                        </div>
-                        <div class="portfolio-card-body">
-                            <h5>Inventory Data Integrity Fixes</h5>
-                            <p class="portfolio-summary">Resolved duplicate sequence, missing category, and barcode
-                                conflicts.</p>
-                            <p class="portfolio-impact"><strong>Impact:</strong> Reduced critical inventory data issues
-                                and
-                                support load.</p>
-                            <p class="portfolio-stack">Odoo, Inventory, PostgreSQL</p>
-                            <a title="Inventory Data Integrity Fixes"
-                                href="img/project/SBS_sbs_debacker/sbs_debacker_01_barcode_settings.png"
-                                class="fancybox fancybox-main portfolio-inline-link" rel="project-8">View details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ULM Accounting Project -->
-                <div class="portfolio-item one-four account isotope-item">
-                    <div class="box portfolio-card">
-                        <div class="hover-bg">
-                            <img src="img/project/ULM_Accounting/invoice_with_salesperson_paid.png"
-                                class="img-responsive" alt="Accounting & Payment Management">
-                            <div class="hover-text off">
-                                <a title="Accounting & Payment Management"
-                                    href="img/project/ULM_Accounting/invoice_with_salesperson_paid.png"
-                                    class="fancybox fancybox-main portfolio-view-link" rel="project-9"><i
-                                        class="fa fa-expand"></i> View details</a>
-                                <a href="img/project/ULM_Accounting/error_different_salespersons_validation.png"
-                                    class="fancybox fancybox-hidden" rel="project-9" style="display:none;"></a>
-                                <a href="img/project/ULM_Accounting/register_payment_wizard_with_salesperson.png"
-                                    class="fancybox fancybox-hidden" rel="project-9" style="display:none;"></a>
-                                <a href="img/project/ULM_Accounting/payment_created_with_salesperson.png"
-                                    class="fancybox fancybox-hidden" rel="project-9" style="display:none;"></a>
-                                <a href="img/project/ULM_Accounting/aged_receivable_with_salesperson_column.png"
-                                    class="fancybox fancybox-hidden" rel="project-9" style="display:none;"></a>
-                                <a href="img/project/ULM_Accounting/sale_order_salesperson_field.png"
-                                    class="fancybox fancybox-hidden" rel="project-9" style="display:none;"></a>
-                                <a href="img/project/ULM_Accounting/customer_salesperson_field.png"
-                                    class="fancybox fancybox-hidden" rel="project-9" style="display:none;"></a>
-                            </div>
-                        </div>
-                        <div class="portfolio-card-body">
-                            <h5>Account</h5>
-                            <p class="portfolio-summary">Complete salesperson tracking system from customer to payment
-                                with automated propagation across invoices, payments, and financial reports</p>
-                            <p class="portfolio-impact"><strong>Impact:</strong> Automated salesperson tracking across
-                                sales workflow, eliminated manual data entry, improved financial visibility and sales
-                                performance analysis</p>
-                            <p class="portfolio-stack">Odoo 18, Python, XML, PostgreSQL, JavaScript</p>
-                            <a title="Accounting & Payment Management"
-                                href="img/project/ULM_Accounting/invoice_with_salesperson_paid.png"
-                                class="fancybox fancybox-main portfolio-inline-link" rel="project-9">View details</a>
-                        </div>
-                    </div>
-                </div>
-
+        <!-- SKILLS BOTTOM: Odoo business apps (moving row).
+             Add / remove a <span class="skill_tag">; js/sections.js duplicates the row for the loop. -->
+        <div class="skills_marquee">
+            <div class="skills_track">
+                <span class="skill_tag"><i class="fa-solid fa-handshake"></i> CRM &amp; Sales</span>
+                <span class="skill_tag"><i class="fa-solid fa-boxes-stacked"></i> Inventory</span>
+                <span class="skill_tag"><i class="fa-solid fa-cart-shopping"></i> Purchase</span>
+                <span class="skill_tag"><i class="fa-solid fa-calculator"></i> Accounting</span>
+                <span class="skill_tag"><i class="fa-solid fa-users"></i> HR</span>
+                <span class="skill_tag"><i class="fa-solid fa-money-check-dollar"></i> Payroll</span>
+                <span class="skill_tag"><i class="fa-solid fa-clock"></i> Attendance &amp; Leave</span>
+                <span class="skill_tag"><i class="fa-solid fa-cash-register"></i> POS</span>
+                <span class="skill_tag"><i class="fa-solid fa-globe"></i> Website &amp; Portal</span>
+                <span class="skill_tag"><i class="fa-solid fa-diagram-project"></i> Workflows &amp; Approvals</span>
+                <span class="skill_tag"><i class="fa-solid fa-right-left"></i> Data Migration</span>
             </div>
         </div>
     </section>
-    <!--/Portfolio -->
+    <!-- END SECTION: TECHNICAL SKILLS + CERTIFICATIONS -->
 
-
+    <!-- =================================================================
+         SECTION: EXPERIENCE (timeline of companies, oldest first)
+         Each company = one "news-item" card under a year "date-title".
+         Add class "right" to a card to put it on the right side.
+         ================================================================= -->
     <section id="experience">
         <div class="container">
-            <section id="news" class="white-bg padding-top-bottom">
+            <div class="section-heading">
+                <h2>Experience</h2>
+                <h6>Companies I have built and shipped Odoo solutions with</h6>
+            </div>
+            <div id="news">
                 <div class="container">
                     <div class="timeline">
                         <div class="date-title">
@@ -715,7 +486,7 @@
                                     <h2 class="news-title">
                                         Digitec
                                     </h2>
-                                    <small class="employment-period">12/2022 - 9/2024</small>
+                                    <small class="employment-period">12/2022 - 09/2024</small>
                                     <span>Odoo Developer</span>
                                     <p>Customized Odoo modules including payroll, attendance, leave, stock and purchase
                                         workflows with policies and security rules.</p>
@@ -746,7 +517,29 @@
                             </div>
                         </div>
 
-
+                        <!-- SBS: worked in parallel with Knowledgebi (before) and NovaNexus (after) -->
+                        <div class="date-title">
+                            <span>2025</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 news-item right">
+                                <div class="news-content">
+                                    <div class="date">
+                                        <img src="img/company/sb5_superior_business_solutions_sbs_logo.jpg"
+                                            alt="SBS Logo" class="news-company-logo"
+                                            onerror="this.onerror=null; this.src='img/company/building-company.png';">
+                                    </div>
+                                    <h2 class="news-title">
+                                        SBS &ndash; Superior Business Solutions
+                                    </h2>
+                                    <small class="employment-period">07/2025 - 06/2026 <span
+                                            class="employment-tag">Parallel</span></small>
+                                    <span>Odoo Developer</span>
+                                    <p>Delivered Odoo customizations for multiple SBS clients across Inventory,
+                                        Barcode &amp; Sequences, POS, Product Rules, and Repair workflows.</p>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="date-title">
                             <span>2026</span>
@@ -771,16 +564,487 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
     </section>
-    <!--Footer-->
+    <!-- END SECTION: EXPERIENCE -->
+
+    <!-- =================================================================
+         SECTION: PORTFOLIO / PROJECTS (filter buttons + project cards)
+         ================================================================= -->
+    <section id="Portfolio" class="content">
+        <div class="container portfolio_title">
+            <div class="section-header">
+                <h2>Projects &amp; Expertise</h2>
+                <h5><em>Selected Odoo solutions and real-world implementations</em></h5>
+                <div class="fancy"><span></span></div>
+            </div>
+
+            <div id="filters" class="sixteen columns text-center">
+                <ul class="list-inline cat clearfix">
+                    <li><a id="all" href="#" data-filter="*" class="active">All</a></li>
+                    <li><a href="#" data-filter=".cat-customization">Customization</a></li>
+                    <li><a href="#" data-filter=".cat-workflows">Workflows</a></li>
+                    <li><a href="#" data-filter=".cat-pos">POS</a></li>
+                    <li><a href="#" data-filter=".cat-inventory">Inventory</a></li>
+                    <li><a href="#" data-filter=".cat-accounting">Accounting</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="portfolio">
+            <div class="isotope fadeInLeft animated wow" id="portfolio_wrapper">
+                <!-- Each card: cover image + up to 4 small screenshots (the rest open in the gallery),
+                     category, industry, Problem / Solution / Result and tech stack. -->
+
+                <!-- Project 01: Charity Beneficiary Management System -->
+                <div class="portfolio-item cat-customization isotope-item">
+                    <div class="box portfolio-card">
+                        <a href="img/project/ElSaman_smn_donations/4_2025-12-18_18-21.png" class="hover-bg fancybox" rel="project-1" title="Charity Beneficiary Management System">
+                            <img src="img/project/ElSaman_smn_donations/4_2025-12-18_18-21.png" class="img-responsive" alt="Charity Beneficiary Management System">
+                            <span class="hover-text"><i class="fa-solid fa-images"></i> View 17 screenshots</span>
+                        </a>
+                        <div class="portfolio-thumbs">
+                            <a href="img/project/ElSaman_smn_donations/10_2025-12-18_18-51.png" class="fancybox" rel="project-1" title="Charity Beneficiary Management System"><img src="img/project/ElSaman_smn_donations/10_2025-12-18_18-51.png" alt="" loading="lazy"></a>
+                            <a href="img/project/ElSaman_smn_donations/11_2025-12-18_18-52.png" class="fancybox" rel="project-1" title="Charity Beneficiary Management System"><img src="img/project/ElSaman_smn_donations/11_2025-12-18_18-52.png" alt="" loading="lazy"></a>
+                            <a href="img/project/ElSaman_smn_donations/12_2025-12-18_18-54.png" class="fancybox" rel="project-1" title="Charity Beneficiary Management System"><img src="img/project/ElSaman_smn_donations/12_2025-12-18_18-54.png" alt="" loading="lazy"></a>
+                            <a href="img/project/ElSaman_smn_donations/13_2025-12-26_16-05.png" class="fancybox" rel="project-1" title="Charity Beneficiary Management System"><img src="img/project/ElSaman_smn_donations/13_2025-12-26_16-05.png" alt="" loading="lazy"><span class="thumb_more">+12</span></a>
+                            <a href="img/project/ElSaman_smn_donations/15_2025-12-26_16-06_2.png" class="fancybox" rel="project-1" title="Charity Beneficiary Management System" style="display:none;"></a>
+                            <a href="img/project/ElSaman_smn_donations/17_2025-12-26_16-06.png" class="fancybox" rel="project-1" title="Charity Beneficiary Management System" style="display:none;"></a>
+                            <a href="img/project/ElSaman_smn_donations/2_2025-12-18_17-04.png" class="fancybox" rel="project-1" title="Charity Beneficiary Management System" style="display:none;"></a>
+                            <a href="img/project/ElSaman_smn_donations/5_2025-12-18_18-41.png" class="fancybox" rel="project-1" title="Charity Beneficiary Management System" style="display:none;"></a>
+                            <a href="img/project/ElSaman_smn_donations/6_2025-12-18_18-47.png" class="fancybox" rel="project-1" title="Charity Beneficiary Management System" style="display:none;"></a>
+                            <a href="img/project/ElSaman_smn_donations/7_2025-12-18_18-48_1.png" class="fancybox" rel="project-1" title="Charity Beneficiary Management System" style="display:none;"></a>
+                            <a href="img/project/ElSaman_smn_donations/8_2025-12-18_18-48.png" class="fancybox" rel="project-1" title="Charity Beneficiary Management System" style="display:none;"></a>
+                            <a href="img/project/ElSaman_smn_donations/9_2025-12-18_18-49.png" class="fancybox" rel="project-1" title="Charity Beneficiary Management System" style="display:none;"></a>
+                            <a href="img/project/ElSaman_smn_donations/14_2025-12-26_16-06_1.png" class="fancybox" rel="project-1" title="Charity Beneficiary Management System" style="display:none;"></a>
+                            <a href="img/project/ElSaman_smn_donations/16_2025-12-26_16-06_3.png" class="fancybox" rel="project-1" title="Charity Beneficiary Management System" style="display:none;"></a>
+                            <a href="img/project/ElSaman_smn_donations/3_2025-12-18_17-22.png" class="fancybox" rel="project-1" title="Charity Beneficiary Management System" style="display:none;"></a>
+                            <a href="img/project/ElSaman_smn_donations/1_2025-12-18_16-42.png" class="fancybox" rel="project-1" title="Charity Beneficiary Management System" style="display:none;"></a>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <div class="portfolio-meta">
+                                <span class="portfolio-number">01</span>
+                                <span class="portfolio-category">Customization</span>
+                                <span class="portfolio-industry"><i class="fa-solid fa-briefcase"></i> Charity organization</span>
+                            </div>
+                            <h5>Charity Beneficiary Management System</h5>
+                            <ul class="portfolio-points">
+                                <li><strong>Problem:</strong> Family data (income, housing, health) was scattered, with no controlled way to remove a beneficiary.</li>
+                                <li><strong>Solution:</strong> Built a complete family file &mdash; members, health conditions, housing history and financial records with net-income calculation &mdash; plus a removal workflow (Draft &rarr; Confirmed &rarr; Approved / Rejected) with reasons and audit trail, fully in Arabic.</li>
+                                <li><strong>Result:</strong> One complete record per family, and every removal decision is approved and documented.</li>
+                            </ul>
+                            <div class="portfolio-stack">
+                                <span>Odoo</span>
+                                <span>Python</span>
+                                <span>XML</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <a href="#" class="portfolio-inline-link open-gallery"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 02: Rule-Based Notification Engine -->
+                <div class="portfolio-item cat-customization isotope-item">
+                    <div class="box portfolio-card">
+                        <a href="img/project/Notification_Model/02_notification_config_form.png" class="hover-bg fancybox" rel="project-2" title="Rule-Based Notification Engine">
+                            <img src="img/project/Notification_Model/02_notification_config_form.png" class="img-responsive" alt="Rule-Based Notification Engine">
+                            <span class="hover-text"><i class="fa-solid fa-images"></i> View 11 screenshots</span>
+                        </a>
+                        <div class="portfolio-thumbs">
+                            <a href="img/project/Notification_Model/04_recipient_type_selection.png" class="fancybox" rel="project-2" title="Rule-Based Notification Engine"><img src="img/project/Notification_Model/04_recipient_type_selection.png" alt="" loading="lazy"></a>
+                            <a href="img/project/Notification_Model/05_specific_users_selection.png" class="fancybox" rel="project-2" title="Rule-Based Notification Engine"><img src="img/project/Notification_Model/05_specific_users_selection.png" alt="" loading="lazy"></a>
+                            <a href="img/project/Notification_Model/06_user_groups_selection.png" class="fancybox" rel="project-2" title="Rule-Based Notification Engine"><img src="img/project/Notification_Model/06_user_groups_selection.png" alt="" loading="lazy"></a>
+                            <a href="img/project/Notification_Model/07_field_on_record_selection.png" class="fancybox" rel="project-2" title="Rule-Based Notification Engine"><img src="img/project/Notification_Model/07_field_on_record_selection.png" alt="" loading="lazy"><span class="thumb_more">+6</span></a>
+                            <a href="img/project/Notification_Model/08_followers_recipient.png" class="fancybox" rel="project-2" title="Rule-Based Notification Engine" style="display:none;"></a>
+                            <a href="img/project/Notification_Model/09_notification_types.png" class="fancybox" rel="project-2" title="Rule-Based Notification Engine" style="display:none;"></a>
+                            <a href="img/project/Notification_Model/10_activity_type_selection.png" class="fancybox" rel="project-2" title="Rule-Based Notification Engine" style="display:none;"></a>
+                            <a href="img/project/Notification_Model/13_send_test_activities.png" class="fancybox" rel="project-2" title="Rule-Based Notification Engine" style="display:none;"></a>
+                            <a href="img/project/Notification_Model/19_activity_notification_detail.png" class="fancybox" rel="project-2" title="Rule-Based Notification Engine" style="display:none;"></a>
+                            <a href="img/project/Notification_Model/20_notification_logs.png" class="fancybox" rel="project-2" title="Rule-Based Notification Engine" style="display:none;"></a>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <div class="portfolio-meta">
+                                <span class="portfolio-number">02</span>
+                                <span class="portfolio-category">Customization</span>
+                                <span class="portfolio-industry"><i class="fa-solid fa-briefcase"></i> Any business</span>
+                            </div>
+                            <h5>Rule-Based Notification Engine</h5>
+                            <ul class="portfolio-points">
+                                <li><strong>Problem:</strong> Odoo notifications are fixed, and every new alert needed custom code.</li>
+                                <li><strong>Solution:</strong> Configurable rules by model, button and domain filter; recipients as specific users, groups, record fields or followers; delivered as inbox message, email, activity or SMS with templates, test sending and delivery logs.</li>
+                                <li><strong>Result:</strong> New business alerts are created from the screen, with no code changes.</li>
+                            </ul>
+                            <div class="portfolio-stack">
+                                <span>Odoo</span>
+                                <span>Python</span>
+                                <span>XML</span>
+                            </div>
+                            <a href="#" class="portfolio-inline-link open-gallery"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 03: Fleet Transport & Repair Integration -->
+                <div class="portfolio-item cat-workflows isotope-item">
+                    <div class="box portfolio-card">
+                        <a href="img/project/SBS_alqashami/53_task_004_08.png" class="hover-bg fancybox" rel="project-3" title="Fleet Transport &amp; Repair Integration">
+                            <img src="img/project/SBS_alqashami/53_task_004_08.png" class="img-responsive" alt="Fleet Transport &amp; Repair Integration">
+                            <span class="hover-text"><i class="fa-solid fa-images"></i> View 14 screenshots</span>
+                        </a>
+                        <div class="portfolio-thumbs">
+                            <a href="img/project/SBS_alqashami/40_2025-12-22_15-58.png" class="fancybox" rel="project-3" title="Fleet Transport &amp; Repair Integration"><img src="img/project/SBS_alqashami/40_2025-12-22_15-58.png" alt="" loading="lazy"></a>
+                            <a href="img/project/SBS_alqashami/41_2025-12-23_14-13_1.png" class="fancybox" rel="project-3" title="Fleet Transport &amp; Repair Integration"><img src="img/project/SBS_alqashami/41_2025-12-23_14-13_1.png" alt="" loading="lazy"></a>
+                            <a href="img/project/SBS_alqashami/42_2025-12-23_14-13.png" class="fancybox" rel="project-3" title="Fleet Transport &amp; Repair Integration"><img src="img/project/SBS_alqashami/42_2025-12-23_14-13.png" alt="" loading="lazy"></a>
+                            <a href="img/project/SBS_alqashami/46_task_004_01.png" class="fancybox" rel="project-3" title="Fleet Transport &amp; Repair Integration"><img src="img/project/SBS_alqashami/46_task_004_01.png" alt="" loading="lazy"><span class="thumb_more">+9</span></a>
+                            <a href="img/project/SBS_alqashami/47_task_004_02.png" class="fancybox" rel="project-3" title="Fleet Transport &amp; Repair Integration" style="display:none;"></a>
+                            <a href="img/project/SBS_alqashami/38_2025-12-22_15-54_1.png" class="fancybox" rel="project-3" title="Fleet Transport &amp; Repair Integration" style="display:none;"></a>
+                            <a href="img/project/SBS_alqashami/49_task_004_04.png" class="fancybox" rel="project-3" title="Fleet Transport &amp; Repair Integration" style="display:none;"></a>
+                            <a href="img/project/SBS_alqashami/50_task_004_05.png" class="fancybox" rel="project-3" title="Fleet Transport &amp; Repair Integration" style="display:none;"></a>
+                            <a href="img/project/SBS_alqashami/51_task_004_06.png" class="fancybox" rel="project-3" title="Fleet Transport &amp; Repair Integration" style="display:none;"></a>
+                            <a href="img/project/SBS_alqashami/52_task_004_07.png" class="fancybox" rel="project-3" title="Fleet Transport &amp; Repair Integration" style="display:none;"></a>
+                            <a href="img/project/SBS_alqashami/43_2025-12-23_14-14_1.png" class="fancybox" rel="project-3" title="Fleet Transport &amp; Repair Integration" style="display:none;"></a>
+                            <a href="img/project/SBS_alqashami/39_2025-12-22_15-55.png" class="fancybox" rel="project-3" title="Fleet Transport &amp; Repair Integration" style="display:none;"></a>
+                            <a href="img/project/SBS_alqashami/48_task_004_03.png" class="fancybox" rel="project-3" title="Fleet Transport &amp; Repair Integration" style="display:none;"></a>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <div class="portfolio-meta">
+                                <span class="portfolio-number">03</span>
+                                <span class="portfolio-category">Workflows</span>
+                                <span class="portfolio-industry"><i class="fa-solid fa-briefcase"></i> Transport &amp; logistics</span>
+                            </div>
+                            <h5>Fleet Transport &amp; Repair Integration</h5>
+                            <ul class="portfolio-points">
+                                <li><strong>Problem:</strong> Vehicles could be dispatched while still under repair, and trip distance and fuel were not tracked.</li>
+                                <li><strong>Solution:</strong> Transfer contracts with routes, job orders per trip (from / to, kilometers, fuel liters, trip difference) and repair orders linked to the vehicle with a repair period. A validation blocks dispatching a vehicle under repair and shows its expected return date.</li>
+                                <li><strong>Result:</strong> No vehicle under repair is sent on a trip, and fuel and distance are recorded for every trip.</li>
+                            </ul>
+                            <div class="portfolio-stack">
+                                <span>Odoo Fleet</span>
+                                <span>Repair</span>
+                                <span>Python</span>
+                                <span>XML</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <a href="#" class="portfolio-inline-link open-gallery"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 04: Smart Product Code & Barcode Generator -->
+                <div class="portfolio-item cat-inventory isotope-item">
+                    <div class="box portfolio-card">
+                        <a href="img/project/General/2025-11-25_12-56.png" class="hover-bg fancybox" rel="project-4" title="Smart Product Code &amp; Barcode Generator">
+                            <img src="img/project/General/2025-11-25_12-56.png" class="img-responsive" alt="Smart Product Code &amp; Barcode Generator">
+                            <span class="hover-text"><i class="fa-solid fa-images"></i> View 9 screenshots</span>
+                        </a>
+                        <div class="portfolio-thumbs">
+                            <a href="img/project/General/2025-11-25_12-46.png" class="fancybox" rel="project-4" title="Smart Product Code &amp; Barcode Generator"><img src="img/project/General/2025-11-25_12-46.png" alt="" loading="lazy"></a>
+                            <a href="img/project/General/2025-11-25_12-48.png" class="fancybox" rel="project-4" title="Smart Product Code &amp; Barcode Generator"><img src="img/project/General/2025-11-25_12-48.png" alt="" loading="lazy"></a>
+                            <a href="img/project/General/2025-11-26_12-10.png" class="fancybox" rel="project-4" title="Smart Product Code &amp; Barcode Generator"><img src="img/project/General/2025-11-26_12-10.png" alt="" loading="lazy"></a>
+                            <a href="img/project/SBS_Babic/24_setting.png" class="fancybox" rel="project-4" title="Smart Product Code &amp; Barcode Generator"><img src="img/project/SBS_Babic/24_setting.png" alt="" loading="lazy"><span class="thumb_more">+4</span></a>
+                            <a href="img/project/SBS_Babic/22_action.png" class="fancybox" rel="project-4" title="Smart Product Code &amp; Barcode Generator" style="display:none;"></a>
+                            <a href="img/project/SBS_Babic/23_copy_to_barcode.png" class="fancybox" rel="project-4" title="Smart Product Code &amp; Barcode Generator" style="display:none;"></a>
+                            <a href="img/project/SBS_Babic/25_update_sequance.png" class="fancybox" rel="project-4" title="Smart Product Code &amp; Barcode Generator" style="display:none;"></a>
+                            <a href="img/project/General/setting.png" class="fancybox" rel="project-4" title="Smart Product Code &amp; Barcode Generator" style="display:none;"></a>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <div class="portfolio-meta">
+                                <span class="portfolio-number">04</span>
+                                <span class="portfolio-category">Inventory</span>
+                                <span class="portfolio-industry"><i class="fa-solid fa-briefcase"></i> Fashion retail</span>
+                            </div>
+                            <h5>Smart Product Code &amp; Barcode Generator</h5>
+                            <ul class="portfolio-points">
+                                <li><strong>Problem:</strong> Typing codes and barcodes for every variant by hand caused errors and duplicates.</li>
+                                <li><strong>Solution:</strong> Auto-generates each variant's internal reference from category, brand, style, model and sequence into a 13-character barcode, with settings for separator and digits, copy-to-barcode and a resequence action.</li>
+                                <li><strong>Result:</strong> Barcodes are generated automatically and uniquely for every product variant.</li>
+                            </ul>
+                            <div class="portfolio-stack">
+                                <span>Odoo Inventory</span>
+                                <span>Python</span>
+                                <span>XML</span>
+                            </div>
+                            <a href="#" class="portfolio-inline-link open-gallery"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 05: Multi-Level Approval Workflow -->
+                <div class="portfolio-item cat-workflows isotope-item">
+                    <div class="box portfolio-card">
+                        <a href="img/project/Work_flow/Work_flow_02.png" class="hover-bg fancybox" rel="project-5" title="Multi-Level Approval Workflow">
+                            <img src="img/project/Work_flow/Work_flow_02.png" class="img-responsive" alt="Multi-Level Approval Workflow">
+                            <span class="hover-text"><i class="fa-solid fa-images"></i> View 4 screenshots</span>
+                        </a>
+                        <div class="portfolio-thumbs">
+                            <a href="img/project/Work_flow/Work_flow_01.png" class="fancybox" rel="project-5" title="Multi-Level Approval Workflow"><img src="img/project/Work_flow/Work_flow_01.png" alt="" loading="lazy"></a>
+                            <a href="img/project/Work_flow/Work_flow_03.png" class="fancybox" rel="project-5" title="Multi-Level Approval Workflow"><img src="img/project/Work_flow/Work_flow_03.png" alt="" loading="lazy"></a>
+                            <a href="img/project/Work_flow/Work_flow_04.png" class="fancybox" rel="project-5" title="Multi-Level Approval Workflow"><img src="img/project/Work_flow/Work_flow_04.png" alt="" loading="lazy"></a>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <div class="portfolio-meta">
+                                <span class="portfolio-number">05</span>
+                                <span class="portfolio-category">Workflows</span>
+                                <span class="portfolio-industry"><i class="fa-solid fa-briefcase"></i> Contracting &amp; trading</span>
+                            </div>
+                            <h5>Multi-Level Approval Workflow</h5>
+                            <ul class="portfolio-points">
+                                <li><strong>Problem:</strong> Quotations, purchases and invoices could be confirmed without any approval.</li>
+                                <li><strong>Solution:</strong> First, second and final approval stages across Sales, Purchase and Invoicing, approval groups per stage, project and approval tabs, and a request-revision action.</li>
+                                <li><strong>Result:</strong> Every document passes the right approver, with a clear approval history.</li>
+                            </ul>
+                            <div class="portfolio-stack">
+                                <span>Odoo</span>
+                                <span>Python</span>
+                                <span>XML</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="#" class="portfolio-inline-link open-gallery"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 06: POS Receipt & Cashier Controls -->
+                <div class="portfolio-item cat-pos isotope-item">
+                    <div class="box portfolio-card">
+                        <a href="img/project/POS/26_2025-11-30_15-28.png" class="hover-bg fancybox" rel="project-6" title="POS Receipt &amp; Cashier Controls">
+                            <img src="img/project/POS/26_2025-11-30_15-28.png" class="img-responsive" alt="POS Receipt &amp; Cashier Controls">
+                            <span class="hover-text"><i class="fa-solid fa-images"></i> View 7 screenshots</span>
+                        </a>
+                        <div class="portfolio-thumbs">
+                            <a href="img/project/POS/27_2025-11-30_15-37.png" class="fancybox" rel="project-6" title="POS Receipt &amp; Cashier Controls"><img src="img/project/POS/27_2025-11-30_15-37.png" alt="" loading="lazy"></a>
+                            <a href="img/project/POS/pos_02.png" class="fancybox" rel="project-6" title="POS Receipt &amp; Cashier Controls"><img src="img/project/POS/pos_02.png" alt="" loading="lazy"></a>
+                            <a href="img/project/POS/pos_03.png" class="fancybox" rel="project-6" title="POS Receipt &amp; Cashier Controls"><img src="img/project/POS/pos_03.png" alt="" loading="lazy"></a>
+                            <a href="img/project/POS/pos_06_hr_03.png" class="fancybox" rel="project-6" title="POS Receipt &amp; Cashier Controls"><img src="img/project/POS/pos_06_hr_03.png" alt="" loading="lazy"><span class="thumb_more">+2</span></a>
+                            <a href="img/project/POS/pos_04_hr_01.png" class="fancybox" rel="project-6" title="POS Receipt &amp; Cashier Controls" style="display:none;"></a>
+                            <a href="img/project/POS/pos_05_hr_02.png" class="fancybox" rel="project-6" title="POS Receipt &amp; Cashier Controls" style="display:none;"></a>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <div class="portfolio-meta">
+                                <span class="portfolio-number">06</span>
+                                <span class="portfolio-category">POS</span>
+                                <span class="portfolio-industry"><i class="fa-solid fa-briefcase"></i> Retail &amp; caf&eacute;s</span>
+                            </div>
+                            <h5>POS Receipt &amp; Cashier Controls</h5>
+                            <ul class="portfolio-points">
+                                <li><strong>Problem:</strong> The default receipt lacked branding and customer details, and cashiers could see the cash-count differences at closing.</li>
+                                <li><strong>Solution:</strong> Customized the POS receipt (logo, customer name and mobile, tax details), auto-tagged customers created from POS, and added a permission that hides closing-session details from cashiers.</li>
+                                <li><strong>Result:</strong> Professional, tax-compliant receipts, and closing figures stay with managers only.</li>
+                            </ul>
+                            <div class="portfolio-stack">
+                                <span>Odoo POS</span>
+                                <span>OWL</span>
+                                <span>QWeb</span>
+                                <span>Python</span>
+                                <span>XML</span>
+                            </div>
+                            <a href="#" class="portfolio-inline-link open-gallery"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 07: Customer Account Statement Report -->
+                <div class="portfolio-item cat-accounting isotope-item">
+                    <div class="box portfolio-card">
+                        <a href="img/project/SBS_pyram/20_2025-11-30_09-26.png" class="hover-bg fancybox" rel="project-7" title="Customer Account Statement Report">
+                            <img src="img/project/SBS_pyram/20_2025-11-30_09-26.png" class="img-responsive" alt="Customer Account Statement Report">
+                            <span class="hover-text"><i class="fa-solid fa-images"></i> View 4 screenshots</span>
+                        </a>
+                        <div class="portfolio-thumbs">
+                            <a href="img/project/SBS_pyram/18_2025-11-30_09-25_1.png" class="fancybox" rel="project-7" title="Customer Account Statement Report"><img src="img/project/SBS_pyram/18_2025-11-30_09-25_1.png" alt="" loading="lazy"></a>
+                            <a href="img/project/SBS_pyram/19_2025-11-30_09-25.png" class="fancybox" rel="project-7" title="Customer Account Statement Report"><img src="img/project/SBS_pyram/19_2025-11-30_09-25.png" alt="" loading="lazy"></a>
+                            <a href="img/project/SBS_pyram/21_2025-11-30_10-40.png" class="fancybox" rel="project-7" title="Customer Account Statement Report"><img src="img/project/SBS_pyram/21_2025-11-30_10-40.png" alt="" loading="lazy"></a>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <div class="portfolio-meta">
+                                <span class="portfolio-number">07</span>
+                                <span class="portfolio-category">Accounting</span>
+                                <span class="portfolio-industry"><i class="fa-solid fa-briefcase"></i> Trading</span>
+                            </div>
+                            <h5>Customer Account Statement Report</h5>
+                            <ul class="portfolio-points">
+                                <li><strong>Problem:</strong> Accountants were building customer statements manually in Excel.</li>
+                                <li><strong>Solution:</strong> Customer statement per partner for any date range &mdash; invoices, payments, refunds and running balance &mdash; exportable to PDF and Excel.</li>
+                                <li><strong>Result:</strong> A full customer statement in one click.</li>
+                            </ul>
+                            <div class="portfolio-stack">
+                                <span>Odoo Accounting</span>
+                                <span>QWeb</span>
+                                <span>Python</span>
+                                <span>XML</span>
+                            </div>
+                            <a href="#" class="portfolio-inline-link open-gallery"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 08: Inventory Data Integrity Fixes -->
+                <div class="portfolio-item cat-inventory isotope-item">
+                    <div class="box portfolio-card">
+                        <a href="img/project/SBS_sbs_debacker/37_issue_03_duplicate_barcode.png" class="hover-bg fancybox" rel="project-8" title="Inventory Data Integrity Fixes">
+                            <img src="img/project/SBS_sbs_debacker/37_issue_03_duplicate_barcode.png" class="img-responsive" alt="Inventory Data Integrity Fixes">
+                            <span class="hover-text"><i class="fa-solid fa-images"></i> View 3 screenshots</span>
+                        </a>
+                        <div class="portfolio-thumbs">
+                            <a href="img/project/SBS_sbs_debacker/36_issue_02_category_missing.png" class="fancybox" rel="project-8" title="Inventory Data Integrity Fixes"><img src="img/project/SBS_sbs_debacker/36_issue_02_category_missing.png" alt="" loading="lazy"></a>
+                            <a href="img/project/SBS_sbs_debacker/35_issue_01_duplicate_sequences.png" class="fancybox" rel="project-8" title="Inventory Data Integrity Fixes"><img src="img/project/SBS_sbs_debacker/35_issue_01_duplicate_sequences.png" alt="" loading="lazy"></a>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <div class="portfolio-meta">
+                                <span class="portfolio-number">08</span>
+                                <span class="portfolio-category">Inventory</span>
+                                <span class="portfolio-industry"><i class="fa-solid fa-briefcase"></i> Fashion retail</span>
+                            </div>
+                            <h5>Inventory Data Integrity Fixes</h5>
+                            <ul class="portfolio-points">
+                                <li><strong>Problem:</strong> Duplicate attribute sequences, missing category codes and duplicate barcodes were breaking product data.</li>
+                                <li><strong>Solution:</strong> Added a resequence action for attribute values, a clear error when a category code is missing, and a duplicate-barcode validation that names the product already using it.</li>
+                                <li><strong>Result:</strong> Clean product data, and no duplicate barcodes at the cashier.</li>
+                            </ul>
+                            <div class="portfolio-stack">
+                                <span>Odoo Inventory</span>
+                                <span>Python</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <a href="#" class="portfolio-inline-link open-gallery"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 09: Salesperson Tracking from Customer to Payment -->
+                <div class="portfolio-item cat-accounting isotope-item">
+                    <div class="box portfolio-card">
+                        <a href="img/project/ULM_Accounting/invoice_with_salesperson_paid.png" class="hover-bg fancybox" rel="project-9" title="Salesperson Tracking from Customer to Payment">
+                            <img src="img/project/ULM_Accounting/invoice_with_salesperson_paid.png" class="img-responsive" alt="Salesperson Tracking from Customer to Payment">
+                            <span class="hover-text"><i class="fa-solid fa-images"></i> View 7 screenshots</span>
+                        </a>
+                        <div class="portfolio-thumbs">
+                            <a href="img/project/ULM_Accounting/customer_salesperson_field.png" class="fancybox" rel="project-9" title="Salesperson Tracking from Customer to Payment"><img src="img/project/ULM_Accounting/customer_salesperson_field.png" alt="" loading="lazy"></a>
+                            <a href="img/project/ULM_Accounting/sale_order_salesperson_field.png" class="fancybox" rel="project-9" title="Salesperson Tracking from Customer to Payment"><img src="img/project/ULM_Accounting/sale_order_salesperson_field.png" alt="" loading="lazy"></a>
+                            <a href="img/project/ULM_Accounting/register_payment_wizard_with_salesperson.png" class="fancybox" rel="project-9" title="Salesperson Tracking from Customer to Payment"><img src="img/project/ULM_Accounting/register_payment_wizard_with_salesperson.png" alt="" loading="lazy"></a>
+                            <a href="img/project/ULM_Accounting/payment_created_with_salesperson.png" class="fancybox" rel="project-9" title="Salesperson Tracking from Customer to Payment"><img src="img/project/ULM_Accounting/payment_created_with_salesperson.png" alt="" loading="lazy"><span class="thumb_more">+2</span></a>
+                            <a href="img/project/ULM_Accounting/error_different_salespersons_validation.png" class="fancybox" rel="project-9" title="Salesperson Tracking from Customer to Payment" style="display:none;"></a>
+                            <a href="img/project/ULM_Accounting/aged_receivable_with_salesperson_column.png" class="fancybox" rel="project-9" title="Salesperson Tracking from Customer to Payment" style="display:none;"></a>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <div class="portfolio-meta">
+                                <span class="portfolio-number">09</span>
+                                <span class="portfolio-category">Accounting</span>
+                                <span class="portfolio-industry"><i class="fa-solid fa-briefcase"></i> Trading &amp; distribution</span>
+                            </div>
+                            <h5>Salesperson Tracking from Customer to Payment</h5>
+                            <ul class="portfolio-points">
+                                <li><strong>Problem:</strong> The salesperson had to be re-entered at every step, so commissions and collections were hard to track.</li>
+                                <li><strong>Solution:</strong> A salesperson field flows automatically from customer &rarr; sales order &rarr; invoice &rarr; payment, a validation blocks one payment across invoices of different salespeople, and a salesperson column was added to Aged Receivable.</li>
+                                <li><strong>Result:</strong> Each salesperson's sales and collections are clear, with no manual entry.</li>
+                            </ul>
+                            <div class="portfolio-stack">
+                                <span>Odoo 18</span>
+                                <span>Python</span>
+                                <span>XML</span>
+                                <span>PostgreSQL</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="#" class="portfolio-inline-link open-gallery"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10: Lot & Expiry Date Tracking -->
+                <div class="portfolio-item cat-inventory isotope-item">
+                    <div class="box portfolio-card">
+                        <a href="img/project/SBS_pure_life/32_2025-12-01_13-37_1.png" class="hover-bg fancybox" rel="project-10" title="Lot &amp; Expiry Date Tracking">
+                            <img src="img/project/SBS_pure_life/32_2025-12-01_13-37_1.png" class="img-responsive" alt="Lot &amp; Expiry Date Tracking">
+                            <span class="hover-text"><i class="fa-solid fa-images"></i> View 3 screenshots</span>
+                        </a>
+                        <div class="portfolio-thumbs">
+                            <a href="img/project/SBS_pure_life/33_2025-12-01_13-37.png" class="fancybox" rel="project-10" title="Lot &amp; Expiry Date Tracking"><img src="img/project/SBS_pure_life/33_2025-12-01_13-37.png" alt="" loading="lazy"></a>
+                            <a href="img/project/SBS_pure_life/34_2025-12-01_14-09.png" class="fancybox" rel="project-10" title="Lot &amp; Expiry Date Tracking"><img src="img/project/SBS_pure_life/34_2025-12-01_14-09.png" alt="" loading="lazy"></a>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <div class="portfolio-meta">
+                                <span class="portfolio-number">10</span>
+                                <span class="portfolio-category">Inventory</span>
+                                <span class="portfolio-industry"><i class="fa-solid fa-briefcase"></i> Pharmacy distribution</span>
+                            </div>
+                            <h5>Lot &amp; Expiry Date Tracking</h5>
+                            <ul class="portfolio-points">
+                                <li><strong>Problem:</strong> Pharmacy products needed their lot number and expiry date visible through the whole sales cycle.</li>
+                                <li><strong>Solution:</strong> Lot / serial number and expiry date are shown and carried from the sales order to the delivery order and the customer invoice.</li>
+                                <li><strong>Result:</strong> Every sold item can be traced by lot and expiry, from order to invoice.</li>
+                            </ul>
+                            <div class="portfolio-stack">
+                                <span>Odoo Sales</span>
+                                <span>Inventory</span>
+                                <span>Accounting</span>
+                                <span>Python</span>
+                                <span>XML</span>
+                            </div>
+                            <a href="#" class="portfolio-inline-link open-gallery"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11: Post-Dated Cheque (PDC) Payments -->
+                <div class="portfolio-item cat-accounting isotope-item">
+                    <div class="box portfolio-card">
+                        <a href="img/project/General/v4.png" class="hover-bg fancybox" rel="project-11" title="Post-Dated Cheque (PDC) Payments">
+                            <img src="img/project/General/v4.png" class="img-responsive" alt="Post-Dated Cheque (PDC) Payments">
+                            <span class="hover-text"><i class="fa-solid fa-images"></i> View 2 screenshots</span>
+                        </a>
+                        <div class="portfolio-thumbs">
+                            <a href="img/project/General/s.png" class="fancybox" rel="project-11" title="Post-Dated Cheque (PDC) Payments"><img src="img/project/General/s.png" alt="" loading="lazy"></a>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <div class="portfolio-meta">
+                                <span class="portfolio-number">11</span>
+                                <span class="portfolio-category">Accounting</span>
+                                <span class="portfolio-industry"><i class="fa-solid fa-briefcase"></i> Trading</span>
+                            </div>
+                            <h5>Post-Dated Cheque (PDC) Payments</h5>
+                            <ul class="portfolio-points">
+                                <li><strong>Problem:</strong> Post-dated cheques from customers and to vendors had no proper accounting flow.</li>
+                                <li><strong>Solution:</strong> PDC receivable and payable accounts per company in settings, and a Register PDC Cheque wizard on bills with cheque reference, due date, bank and agent.</li>
+                                <li><strong>Result:</strong> Post-dated cheques are recorded in the right accounts until they clear.</li>
+                            </ul>
+                            <div class="portfolio-stack">
+                                <span>Odoo Accounting</span>
+                                <span>Python</span>
+                                <span>XML</span>
+                            </div>
+                            <a href="#" class="portfolio-inline-link open-gallery"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> View details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END SECTION: PORTFOLIO / PROJECTS -->
+
+
+    <!-- =================================================================
+         SECTION: FOOTER / CONTACT (name, social links, copyright)
+         ================================================================= -->
     <footer class="footer_wrapper" id="contact">
         <div class="container">
             <div class="footer_bar">
                 <div class="footer_identity">
                     <strong>Abd Elhamed Saad</strong>
-                    <span>Odoo Developer</span>
+                    <span>Senior Odoo Developer</span>
+                    <img src="img/odoo-logo.svg" alt="Odoo">
                 </div>
                 <ul class="social_links footer_social">
                     <li><a href="https://www.linkedin.com/in/abd-el-hamed-saad/" target="_blank"><i
@@ -790,7 +1054,7 @@
                     <li><a href="https://www.facebook.com/Abd.Elh7med.Saad" target="_blank"><i
                                 class="fa-brands fa-facebook-f"></i></a></li>
                     <li>
-                        <a href="https://wa.me/01050039300" target="_blank"><i class="fa-brands fa-whatsapp"></i> </a>
+                        <a href="https://wa.me/201050039300" target="_blank"><i class="fa-brands fa-whatsapp"></i> </a>
                     </li>
                 </ul>
                 <div class="footer_bottom">
@@ -799,7 +1063,11 @@
             </div>
         </div>
     </footer>
+    <!-- END SECTION: FOOTER / CONTACT -->
 
+    <!-- =================================================================
+         SCRIPTS
+         ================================================================= -->
     <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
@@ -809,6 +1077,12 @@
     <script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/wow.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <!-- Stats counters + moving skills rows -->
+    <script type="text/javascript" src="js/sections.js"></script>
+
+    <!-- =================================================================
+         DOWNLOAD CV: renders cv-paper.html (#cv-content) to a one-page PDF
+         ================================================================= -->
     <script src="js/html2pdf.bundle.min.js"></script>
     <script>
         function downloadCvFromTemplate(event) {

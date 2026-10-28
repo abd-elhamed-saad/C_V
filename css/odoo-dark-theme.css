@@ -1250,13 +1250,14 @@ a:hover, a:focus {
 
 .news-item .news-content {
     background: var(--surface);
-    border: 1px solid var(--border);
-    box-shadow: none;
+    border: 1px solid rgba(176, 127, 165, 0.22);
+    /* soft Odoo-purple glow around each job card */
+    box-shadow: 0 10px 30px rgba(113, 75, 103, 0.28), 0 0 0 1px rgba(113, 75, 103, 0.08);
     color: var(--text-muted);
 }
 
 .news-item.right .news-content {
-    box-shadow: none;
+    box-shadow: 0 10px 30px rgba(113, 75, 103, 0.28), 0 0 0 1px rgba(113, 75, 103, 0.08);
 }
 
 .news-item .news-content:after {
@@ -1277,6 +1278,7 @@ a:hover, a:focus {
     background: var(--odoo);
     border-color: var(--odoo);
     color: #fff;
+    box-shadow: 0 16px 44px rgba(113, 75, 103, 0.55), 0 0 26px rgba(227, 166, 207, 0.18);
 }
 
 .news-item:hover .news-content:after {

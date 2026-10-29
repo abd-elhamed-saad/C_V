@@ -218,6 +218,11 @@
         e.preventDefault();
         jQuery(this).closest('.portfolio-card').find('a.hover-bg').trigger('click');
     });
+    // App Store cards (#apps): "Screenshots" opens the app's gallery.
+    jQuery(document).on('click', '#apps .app_gallery_btn', function (e) {
+        e.preventDefault();
+        jQuery(this).closest('.app_card').find('.app_gallery a.fancybox').first().trigger('click');
+    });
 })();
 
 

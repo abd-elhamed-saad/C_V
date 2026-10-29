@@ -1338,6 +1338,275 @@ a:hover, a:focus {
 
 
 /* =====================================================================
+   9b. ODOO APP STORE SECTION (#apps) - my published apps, 3 per row
+   ===================================================================== */
+.hero_chip_apps {
+    color: var(--odoo-pink);
+    border-color: rgba(176, 127, 165, 0.6);
+    background: rgba(113, 75, 103, 0.18);
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.hero_chip_apps:hover,
+.hero_chip_apps:focus {
+    color: #fff;
+    text-decoration: none;
+    border-color: var(--odoo-light);
+    background: rgba(113, 75, 103, 0.35);
+}
+
+.hero_chip_apps img {
+    height: 11px;
+    width: auto;
+}
+
+.hero_chip.hero_chip_apps i {
+    font-size: 11px;
+    color: inherit;
+}
+
+#apps {
+    padding: 90px 0 100px;
+    background: var(--bg);
+}
+
+#apps .section-heading h2 {
+    color: var(--text);
+}
+
+#apps .section-heading h6 {
+    color: var(--text-muted);
+}
+
+.apps_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+/* each card takes the main color of its icon */
+.app_tone_blue { --app-tone: 28, 167, 216; }
+.app_tone_green { --app-tone: 47, 203, 138; }
+.app_tone_amber { --app-tone: 255, 172, 40; }
+
+.app_card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.app_card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(var(--app-tone), 0.55);
+    box-shadow: 0 16px 40px rgba(var(--app-tone), 0.16);
+}
+
+/* top panel: animated icon with the app name under it */
+.app_hero {
+    position: relative;
+    padding: 34px 22px 24px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    background:
+        radial-gradient(circle at 50% 38%, rgba(var(--app-tone), 0.26), transparent 62%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
+}
+
+.app_hero_icon {
+    display: block;
+    width: 132px;
+    height: 132px;
+    margin: 0 auto 18px;
+    padding: 12px;
+    border-radius: 32px;
+    background: #fff;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45), 0 0 0 6px rgba(var(--app-tone), 0.18);
+    transition: transform 0.3s ease;
+}
+
+.app_card:hover .app_hero_icon {
+    transform: scale(1.05);
+}
+
+.app_hero h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--text);
+}
+
+.app_sub {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: rgb(var(--app-tone));
+}
+
+.app_body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px 22px 22px;
+}
+
+.app_meta {
+    justify-content: center;
+}
+
+.app_versions,
+.app_paid {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.app_paid i {
+    color: var(--odoo-light);
+}
+
+.app_desc {
+    margin: 4px 0 12px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d6d6de;
+}
+
+.app_features {
+    margin: 0 0 16px;
+    padding: 0;
+    list-style: none;
+}
+
+.app_features li {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-muted);
+}
+
+.app_features i {
+    flex: none;
+    margin-top: 4px;
+    font-size: 12px;
+    color: rgb(var(--app-tone));
+}
+
+.app_stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0 0 18px;
+}
+
+.app_stack span {
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #d0d0da;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.app_actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px 12px;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.app_store_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    font-size: 13.5px;
+    font-weight: 700;
+    white-space: nowrap;
+    color: #fff;
+    border-radius: 999px;
+    background: var(--odoo);
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app_store_btn img {
+    height: 13px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.app_store_btn i {
+    font-size: 12px;
+}
+
+.app_store_btn:hover,
+.app_store_btn:focus {
+    color: #fff;
+    text-decoration: none;
+    background: #8a5c7e;
+    box-shadow: 0 6px 20px var(--odoo-glow);
+}
+
+.app_gallery_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--odoo-pink);
+}
+
+.app_gallery_btn:hover,
+.app_gallery_btn:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.apps_all {
+    margin: 36px 0 0;
+    text-align: center;
+}
+
+.apps_all a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--odoo-pink);
+}
+
+.apps_all a:hover,
+.apps_all a:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 1199px) {
+    .apps_grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767px) {
+    #apps { padding: 60px 0 70px; }
+    .apps_grid { grid-template-columns: 1fr; gap: 20px; }
+    .app_hero_icon { width: 112px; height: 112px; border-radius: 28px; }
+}
+
+
+/* =====================================================================
    10. FOOTER / CONTACT SECTION (#contact)
    ===================================================================== */
 .footer_wrapper {

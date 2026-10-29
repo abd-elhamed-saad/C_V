@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <title>Notification Manager</title>
+  <defs>
+    <linearGradient id="bellFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFD84D"/>
+      <stop offset="1" stop-color="#FFA41B"/>
+    </linearGradient>
+    <linearGradient id="badgeFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF6B6B"/>
+      <stop offset="1" stop-color="#E03131"/>
+    </linearGradient>
+  </defs>
+  <style>
+    /* One cycle: a new notification arrives, the bell rings and settles, the badge pops in. */
+    .bell, .clapper, .badge, .wave { transform-box: view-box; }
+    .bell { transform-origin: 128px 40px; animation: ring 3.2s ease-in-out infinite; }
+    .clapper { transform-origin: 128px 120px; animation: clap 3.2s ease-in-out infinite; }
+    .badge { transform-origin: 186px 64px; animation: pop 3.2s ease-out infinite; }
+    .wave { opacity: 0; animation: wave 3.2s ease-out infinite; }
+    .wave.outer { animation-delay: 0.12s; }
+    @keyframes ring {
+      0%, 12% { transform: rotate(0); }
+      18% { transform: rotate(16deg); }
+      26% { transform: rotate(-14deg); }
+      34% { transform: rotate(10deg); }
+      42% { transform: rotate(-7deg); }
+      50% { transform: rotate(4deg); }
+      58%, 100% { transform: rotate(0); }
+    }
+    @keyframes clap {
+      0%, 14% { transform: rotate(0); }
+      20% { transform: rotate(-10deg); }
+      28% { transform: rotate(9deg); }
+      36% { transform: rotate(-6deg); }
+      44% { transform: rotate(4deg); }
+      52%, 100% { transform: rotate(0); }
+    }
+    @keyframes pop {
+      0%, 8% { transform: scale(0); }
+      16% { transform: scale(1.18); }
+      22%, 92% { transform: scale(1); }
+      100% { transform: scale(0); }
+    }
+    @keyframes wave {
+      0%, 14% { opacity: 0; }
+      22%, 44% { opacity: 1; }
+      60%, 100% { opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .bell, .clapper, .badge, .wave { animation: none; }
+      .wave { opacity: 1; }
+    }
+  </style>
+
+  <!-- sound waves -->
+  <g fill="none" stroke="#1F1F2B" stroke-width="9" stroke-linecap="round">
+    <path class="wave" d="M50 86 Q 34 116 50 146"/>
+    <path class="wave outer" d="M28 72 Q 6 116 28 160"/>
+    <path class="wave" d="M206 106 Q 216 126 206 146"/>
+    <path class="wave outer" d="M228 100 Q 246 130 228 160"/>
+  </g>
+
+  <g class="bell" stroke="#1F1F2B" stroke-width="9" stroke-linejoin="round" stroke-linecap="round">
+    <!-- clapper swings under the bell -->
+    <g class="clapper">
+      <circle cx="128" cy="204" r="17" fill="#F08C00"/>
+    </g>
+    <!-- knob -->
+    <circle cx="128" cy="40" r="13" fill="#FFC53D"/>
+    <!-- body -->
+    <path fill="url(#bellFill)"
+          d="M128 52 C 90 52 74 82 74 118 L 74 146 C 74 160 64 168 52 176 L 204 176 C 192 168 182 160 182 146 L 182 118 C 182 82 166 52 128 52 Z"/>
+    <!-- highlight -->
+    <path fill="none" stroke="#FFF6D6" stroke-width="9" d="M98 128 L 98 116 C 98 96 106 82 118 76"/>
+    <!-- rim -->
+    <rect x="42" y="170" width="172" height="24" rx="12" fill="#FFB224"/>
+  </g>
+
+  <!-- unread badge -->
+  <g class="badge">
+    <circle cx="186" cy="64" r="32" fill="url(#badgeFill)" stroke="#1F1F2B" stroke-width="9"/>
+    <path d="M181 50 L 189 46 L 189 82" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

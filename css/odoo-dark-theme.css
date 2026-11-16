@@ -1317,7 +1317,7 @@ a:hover, a:focus {
     border-color: rgba(176, 127, 165, 0.5);
 }
 
-/* small "Parallel" label for jobs that overlapped other jobs (e.g. SBS) */
+/* small "Remote" label next to a job period (e.g. SBS) */
 .news-content .employment-tag {
     display: inline-block;
     margin-left: 6px;

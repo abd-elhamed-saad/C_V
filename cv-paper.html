@@ -3,7 +3,9 @@
 
 <!-- =====================================================================
      ONE-PAGE CV (ATS friendly)
-     This page is what the "Download CV" button on the website turns into a PDF.
+     This page is the source of Abd_Elhamed_Saad_CV.pdf (the website's "Download CV" file).
+     After any change here run ./build-cv-pdf.sh to rebuild the PDF, then commit both files.
+     Opened directly, the page also opens the print dialog ("Save as PDF").
      Dates use the same format as the Experience section of index.html.
      Rules kept for ATS: one column, real text, standard section titles,
      no tables, no skill percentages. Logos are decoration only.
@@ -45,6 +47,12 @@
             background: #555;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
+        }
+
+        @media print {
+            html {
+                background: #fff;
+            }
         }
 
         body {
@@ -100,7 +108,7 @@
 
         .cv-contact {
             margin-top: 2mm;
-            font-size: 7.9pt;
+            font-size: 7.6pt;
             color: #d9d4dc;
         }
 
@@ -110,7 +118,7 @@
 
         .cv-contact span + span:before {
             content: "|";
-            margin: 0 1.6mm;
+            margin: 0 1.3mm;
             color: var(--odoo-light);
         }
 
@@ -269,13 +277,42 @@
             background: var(--dark);
         }
 
+        .cv-link {
+            color: var(--odoo);
+            text-decoration: underline;
+        }
+
         .cv-footer b {
             color: var(--odoo-pink);
+        }
+
+        /* ---------- "Save as PDF" button (screen only, never in the PDF) ---------- */
+        .cv-save {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 10;
+            padding: 10px 18px;
+            font: 700 14px 'Noto Sans', Arial, sans-serif;
+            color: #fff;
+            background: var(--odoo);
+            border: 0;
+            border-radius: 999px;
+            box-shadow: 0 6px 18px rgba(113, 75, 103, 0.45);
+            cursor: pointer;
+        }
+
+        @media print {
+            .cv-save {
+                display: none;
+            }
         }
     </style>
 </head>
 
 <body>
+    <button type="button" class="cv-save" onclick="window.print()">Save as PDF</button>
+
     <div id="cv-content">
 
     <!-- ===== HEADER ===== -->
@@ -283,11 +320,11 @@
         <h1>Abd Elhamed <span>Saad</span></h1>
         <p class="cv-title">Senior Odoo Developer &middot; ERP Customization &amp; Integration &middot; Odoo 15 &ndash; 19</p>
         <p class="cv-contact">
-            <span>abdel7med.saad@gmail.com</span>
-            <span>+20 105 003 9300</span>
+            <span><a href="mailto:abdel7med.saad@gmail.com">abdel7med.saad@gmail.com</a></span>
+            <span><a href="tel:+201050039300">+20 105 003 9300</a></span>
             <span>Al-Khanka, Egypt</span>
-            <span>linkedin.com/in/abd-el-hamed-saad</span>
-            <span>github.com/abd-elhamed-saad</span>
+            <span><a href="https://www.linkedin.com/in/abd-el-hamed-saad/">linkedin.com/in/abd-el-hamed-saad</a></span>
+            <span><a href="https://github.com/abd-elhamed-saad">github.com/abd-elhamed-saad</a></span>
         </p>
     </header>
 
@@ -429,16 +466,14 @@
         <section class="cv-section">
             <h2>Selected Projects</h2>
             <ul>
-                <li><strong>Fleet Transport &amp; Repair Integration</strong> (Transport) &ndash; trip fuel &amp; distance
-                    tracking; blocks dispatching vehicles under repair.</li>
-                <li><strong>Charity Beneficiary Management</strong> (Charity) &ndash; family files, financial records and
-                    an approved, audited removal workflow.</li>
-                <li><strong>Smart Barcode Generator</strong> (Fashion retail) &ndash; unique 13-character barcodes
-                    generated automatically per variant.</li>
-                <li><strong>Salesperson Tracking</strong> (Distribution) &ndash; salesperson flows from customer to
-                    payment and Aged Receivable.</li>
-                <li><strong>POS Receipt &amp; Cashier Controls</strong> (Retail) &ndash; branded, tax-compliant receipts;
-                    closing figures hidden from cashiers.</li>
+                <li><strong>Fleet Transport &amp; Repair Integration</strong> (Transport &amp; logistics) &ndash; no
+                    vehicle under repair is sent on a trip; fuel and distance recorded for every trip.</li>
+                <li><strong>Charity Beneficiary Management System</strong> (Charity) &ndash; one complete record per
+                    family; every removal decision approved and documented.</li>
+                <li><strong>Smart Product Code &amp; Barcode Generator</strong> (Fashion retail) &ndash; unique barcodes
+                    generated automatically for every product variant.</li>
+                <li><strong>POS Receipt &amp; Cashier Controls</strong> (Retail &amp; caf&eacute;s) &ndash; professional,
+                    tax-compliant receipts; closing figures stay with managers only.</li>
             </ul>
         </section>
 
@@ -447,10 +482,15 @@
             <section class="cv-section">
                 <h2>Odoo App Store (Paid Apps)</h2>
                 <ul>
-                    <li><strong>Cheque Master</strong> &ndash; PDC lifecycle, cheque books &amp; bilingual vouchers.</li>
-                    <li><strong>Approval Workflow Engine</strong> &ndash; no-code states, transitions &amp; gate rules.</li>
-                    <li><strong>Notification Manager</strong> &ndash; rule-based alerts on any model.</li>
-                    <li>All for Odoo 18 &amp; 19 &middot; apps.odoo.com, author &ldquo;Abd Elhamed Saad&rdquo;</li>
+                    <li><a href="https://apps.odoo.com/apps/modules/19.0/cheque_master"><strong>Cheque Master</strong></a>
+                        &ndash; post-dated cheque lifecycle, cheque books &amp; bilingual vouchers.</li>
+                    <li><a href="https://apps.odoo.com/apps/modules/19.0/dynamic_state_approval"><strong>Approval Workflow
+                        Engine</strong></a> &ndash; no-code states, transitions &amp; gate rules on any model.</li>
+                    <li><a href="https://apps.odoo.com/apps/modules/19.0/notification_manager"><strong>Notification
+                        Manager</strong></a> &ndash; rule-based alerts with activities &amp; calendar.</li>
+                    <li>All for Odoo 18 &amp; 19 &middot; <a class="cv-link"
+                        href="https://apps.odoo.com/apps/modules/browse?author=Abd%20Elhamed%20Saad">apps.odoo.com,
+                        author &ldquo;Abd Elhamed Saad&rdquo;</a></li>
                 </ul>
             </section>
 
@@ -458,6 +498,7 @@
                 <h2>Education &amp; Certifications</h2>
                 <ul>
                     <li><strong>Frontend Development Diploma</strong> &ndash; Route IT Training Center, 2025</li>
+                    <li><strong>Additional Studies</strong> &ndash; Faculty of Commerce, Cairo University, 2022</li>
                     <li><strong>B.A. in Geography</strong> &ndash; Ain Shams University, 2016</li>
                     <li><strong>Languages:</strong> Arabic (Native), English (Professional Working)</li>
                 </ul>
@@ -467,10 +508,23 @@
 
     <!-- ===== FOOTER: link to the full portfolio ===== -->
     <footer class="cv-footer">
-        Full portfolio with project screenshots: <b>abd-elhamed-saad.github.io/C_V</b>
+        Full portfolio with project screenshots: <a href="https://abd-elhamed-saad.github.io/C_V/"><b>abd-elhamed-saad.github.io/C_V</b></a>
     </footer>
 
     </div>
+
+    <script>
+        // Suggested file name in the "Save as PDF" dialog
+        document.title = 'Abd_Elhamed_Saad_CV';
+
+        // Open the print dialog once the font is loaded, so the PDF always fits on one A4
+        window.addEventListener('load', function () {
+            var ready = document.fonts ? document.fonts.ready : Promise.resolve();
+            ready.then(function () {
+                setTimeout(function () { window.print(); }, 300);
+            });
+        });
+    </script>
 </body>
 
 </html>
